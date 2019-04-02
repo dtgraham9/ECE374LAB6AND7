@@ -1,0 +1,809 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/simulation/modelsim
+Eadd_isa
+Z1 w1554088118
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z4 DPx4 work 10 components 0 22 WZWI43NEN:jMD1<]2DlEO1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd
+Z8 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd
+l0
+L5
+VE^I>Yc=YfmnK`gH1=:dad3
+!s100 kHWE]SR:z2_TUOBafzRB[2
+Z9 OV;C;10.5b;63
+31
+Z10 !s110 1554096225
+!i10b 1
+Z11 !s108 1554096225.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd|
+Z13 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 add_isa 0 22 E^I>Yc=YfmnK`gH1=:dad3
+l53
+L10
+VGbC@Wm2:azm8fLD@MR71U1
+!s100 0?QJXAA[=M3KR7:F_Tmm_1
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Ealu
+Z16 w1551040256
+R2
+R3
+R4
+R5
+R6
+R0
+Z17 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd
+Z18 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd
+l0
+L5
+V@U];P`ALcQYf6z9f319641
+!s100 @7Y0oN>VL4L>DE]TA>KQ?1
+R9
+31
+Z19 !s110 1554096224
+!i10b 1
+Z20 !s108 1554096224.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd|
+Z22 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd|
+!i113 1
+R14
+R15
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 3 alu 0 22 @U];P`ALcQYf6z9f319641
+l17
+L13
+VkCBJATSU[LTMk2jEBWRbc0
+!s100 ZmOVP:BP2SOYg5O1FXl]51
+R9
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R14
+R15
+Eandgate
+Z23 w1551664678
+R2
+R3
+R4
+R5
+R6
+R0
+Z24 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd
+Z25 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd
+l0
+L5
+V4LnA[iJdImSbYRbT<V=Xl3
+!s100 A>COlbHeUPEZ=NLUY]Pa50
+R9
+31
+Z26 !s110 1554096226
+!i10b 1
+Z27 !s108 1554096226.000000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd|
+Z29 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd|
+!i113 1
+R14
+R15
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 andgate 0 22 4LnA[iJdImSbYRbT<V=Xl3
+l13
+L10
+V3j]JiYzZf[ELWaCk`]?5X1
+!s100 bm?z8nQDWGimbOB5HCQ:j3
+R9
+31
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R14
+R15
+Ebitwiseand
+Z30 w1550032124
+R2
+R3
+R4
+R5
+R6
+R0
+Z31 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd
+Z32 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd
+l0
+L5
+V_g<W7VC:o=?gNO5NG0Mh@3
+!s100 aVOoGLBn]0eE<FG_YMd6N1
+R9
+31
+R10
+!i10b 1
+R11
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd|
+Z34 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd|
+!i113 1
+R14
+R15
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 bitwiseand 0 22 _g<W7VC:o=?gNO5NG0Mh@3
+l13
+L10
+V[_P:B]gXA7d^8XjgX`X4P1
+!s100 N7[nD@[0l<YHPADRd:B[J0
+R9
+31
+R10
+!i10b 1
+R11
+R33
+R34
+!i113 1
+R14
+R15
+Ebitwiseor
+Z35 w1550032127
+R2
+R3
+R4
+R5
+R6
+R0
+Z36 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd
+Z37 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd
+l0
+L5
+V?WDRKjW9a<Q<:A3c]Y:Dz3
+!s100 EYO^7l=>J0Dk1?7kezX=62
+R9
+31
+R10
+!i10b 1
+R11
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd|
+Z39 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd|
+!i113 1
+R14
+R15
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 9 bitwiseor 0 22 ?WDRKjW9a<Q<:A3c]Y:Dz3
+l13
+L10
+Vc>3:HV[hDMl>iaEhjbQab3
+!s100 1FSS7jA7cfbfYRQzD5Vml1
+R9
+31
+R10
+!i10b 1
+R11
+R38
+R39
+!i113 1
+R14
+R15
+Pcomponents
+R2
+R3
+R5
+R6
+w1553725470
+R0
+8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd
+FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd
+l0
+L5
+VWZWI43NEN:jMD1<]2DlEO1
+!s100 g`DN^EchdKW[_43[>0[Y@1
+R9
+31
+R19
+!i10b 1
+R20
+!s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd|
+!s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd|
+!i113 1
+R14
+R15
+Edata_memory
+Z40 w1551650014
+R2
+R3
+R4
+R5
+R6
+R0
+Z41 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd
+Z42 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd
+l0
+L6
+Vb^UNfSiUV39;<n_75e7fI3
+!s100 ]:6Z5OUo9e4Rijehb6@dj2
+R9
+31
+R26
+!i10b 1
+R27
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd|
+Z44 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 11 data_memory 0 22 b^UNfSiUV39;<n_75e7fI3
+l41
+L12
+V_mbmESlnhGSUSX@DoKfNf3
+!s100 dJe]@VLFeY^k5]Jc[4ei>1
+R9
+31
+R26
+!i10b 1
+R27
+R43
+R44
+!i113 1
+R14
+R15
+Edec2to4
+Z45 w1548007893
+R5
+R6
+R0
+Z46 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd
+Z47 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd
+l0
+L6
+V7obXTbi9S>EeXNbj1:@Bf2
+!s100 NbZK8dGF6nXNm>[=`JC>_0
+R9
+31
+R19
+!i10b 1
+R20
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
+Z49 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
+!i113 1
+R14
+R15
+Alogicfunc
+R5
+R6
+DEx4 work 7 dec2to4 0 22 7obXTbi9S>EeXNbj1:@Bf2
+l13
+L12
+VhN8DPKlKgnC?VE[1n^h@G0
+!s100 LmmfXEm2d@d@EW5E?AC=j3
+R9
+31
+R19
+!i10b 1
+R20
+R48
+R49
+!i113 1
+R14
+R15
+Edec4to16
+R45
+R2
+R3
+R4
+R5
+R6
+R0
+Z50 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
+Z51 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
+l0
+L7
+V0YDY9ROXNa`nXSJLmbm1m0
+!s100 :9aj>2=0mEkm@@Obl_l_h0
+R9
+31
+R10
+!i10b 1
+R11
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
+Z53 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 8 dec4to16 0 22 0YDY9ROXNa`nXSJLmbm1m0
+l15
+L13
+VCf3d<^6cTMM_i96j:I>J<3
+!s100 G?h^7U`X@@8o91bo@5CTI1
+R9
+31
+R10
+!i10b 1
+R11
+R52
+R53
+!i113 1
+R14
+R15
+Efulladd
+Z54 w1548795820
+R5
+R6
+R0
+Z55 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
+Z56 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
+l0
+L6
+VziY8cfTYCVz8^A`EWKZ2^1
+!s100 cXj=L=BeW98zYAJRLH9@j1
+R9
+31
+R19
+!i10b 1
+R20
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
+Z58 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
+!i113 1
+R14
+R15
+Alogicfunc
+R5
+R6
+DEx4 work 7 fulladd 0 22 ziY8cfTYCVz8^A`EWKZ2^1
+l12
+L11
+V;4A99eQYCR7B]KEjGZg0E2
+!s100 3Td1GOE:Li?fBdDZM`>ez2
+R9
+31
+R19
+!i10b 1
+R20
+R57
+R58
+!i113 1
+R14
+R15
+Einstruction_decode
+Z59 w1551822166
+R2
+R3
+R4
+R5
+R6
+R0
+Z60 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
+Z61 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
+l0
+L6
+VI5S8=f=@<;onK3agJ^o_61
+!s100 HhGi25M]mPDO<oUU9igcY1
+R9
+31
+R10
+!i10b 1
+R11
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
+Z63 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 18 instruction_decode 0 22 I5S8=f=@<;onK3agJ^o_61
+l23
+L19
+VZ5JXJfM::Pl[NB6WMgoTP0
+!s100 R@NXQ[ERGfkX^SdI08YMZ3
+R9
+31
+R10
+!i10b 1
+R11
+R62
+R63
+!i113 1
+R14
+R15
+Einstruction_memory
+Z64 w1554096117
+R2
+R3
+R4
+Z65 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R5
+R6
+R0
+Z66 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
+Z67 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
+l0
+L8
+V<LM=NWoj7SeK`WOZ:ge102
+!s100 FUE5I95cMAaTeae4:ielR2
+R9
+31
+R10
+!i10b 1
+R11
+Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
+Z69 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R65
+R5
+R6
+DEx4 work 18 instruction_memory 0 22 <LM=NWoj7SeK`WOZ:ge102
+l40
+L14
+V8CTzDIMQCUTRYIKZ?3N6Q2
+!s100 WgNfmR5T2hjQXP_l2T8R]1
+R9
+31
+R10
+!i10b 1
+R11
+R68
+R69
+!i113 1
+R14
+R15
+Emux2to1
+Z70 w1548007894
+R5
+R6
+R0
+Z71 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
+Z72 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
+l0
+L6
+V]F]hTDio`OR<=VY3ZSjfn2
+!s100 2Y]BJOJ>nfG@D@kF6<KcB0
+R9
+31
+R19
+!i10b 1
+R20
+Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
+Z74 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
+!i113 1
+R14
+R15
+Alogicfunc
+R5
+R6
+DEx4 work 7 mux2to1 0 22 ]F]hTDio`OR<=VY3ZSjfn2
+l15
+L13
+Vm2f86Nge<14h;NWU_K>[>1
+!s100 ;W^SCehM[9I;kQINc0CEK0
+R9
+31
+R19
+!i10b 1
+R20
+R73
+R74
+!i113 1
+R14
+R15
+Emux4to1
+R70
+R2
+R3
+R4
+R5
+R6
+R0
+Z75 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
+Z76 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
+l0
+L6
+V81WhnCONI:cWkiKH_1fkR1
+!s100 nT:OzDKVMaJZ1zaY`OLXK2
+R9
+31
+R10
+!i10b 1
+R11
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
+Z78 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 mux4to1 0 22 81WhnCONI:cWkiKH_1fkR1
+l17
+L13
+VkD?H>aM:]4=h8BFlGTZP00
+!s100 <lJc1_mQ>`X>fQB]PmRX52
+R9
+31
+R10
+!i10b 1
+R11
+R77
+R78
+!i113 1
+R14
+R15
+Ereg1
+Z79 w1553724751
+R5
+R6
+R0
+Z80 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
+Z81 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
+l0
+L4
+VTNFC6:B[H4CSBC@Bf`ij[1
+!s100 <T[OREDgJB`k>b@b3kYdV2
+R9
+31
+R19
+!i10b 1
+R20
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
+Z83 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 4 reg1 0 22 TNFC6:B[H4CSBC@Bf`ij[1
+l11
+L10
+VdecXn_G_D_CVzQNWHn<>^0
+!s100 <@=57g91Bk@WdL@:D=of<2
+R9
+31
+R19
+!i10b 1
+R20
+R82
+R83
+!i113 1
+R14
+R15
+Eregister_file
+Z84 w1554096119
+R2
+R3
+R4
+R5
+R6
+R0
+Z85 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
+Z86 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
+l0
+L6
+Ve7HQgG3ff8;CjnQSG<FQb1
+!s100 [Th0f3?l;UUR2KNP]lJ6a2
+R9
+31
+R10
+!i10b 1
+R11
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
+Z88 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 13 register_file 0 22 e7HQgG3ff8;CjnQSG<FQb1
+l41
+L12
+VJL6E;l9o7nnmQUE>UAi=j1
+!s100 eYBzn=zeJgK;ZDKm`H>L53
+R9
+31
+R10
+!i10b 1
+R11
+R87
+R88
+!i113 1
+R14
+R15
+Eregn
+R70
+R5
+R6
+R0
+Z89 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
+Z90 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
+l0
+L5
+V<n2ab<HDD_k2>QBCPM]9>3
+!s100 9WISHEa<GU>hb:hkoFU>l1
+R9
+31
+R19
+!i10b 1
+R20
+Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
+Z92 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 4 regn 0 22 <n2ab<HDD_k2>QBCPM]9>3
+l13
+L12
+V6fP>odf>[FfYhH6bzlTP=2
+!s100 H_Fd<a^^4ZRKjV6>Zi4<R0
+R9
+31
+R19
+!i10b 1
+R20
+R91
+R92
+!i113 1
+R14
+R15
+Eripple_carry
+Z93 w1549402782
+R2
+R3
+R4
+R5
+R6
+R0
+Z94 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
+Z95 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
+l0
+L8
+Vc:T[_OcQda0N;EmHS<fze2
+!s100 NecK9P_@beN7`aT5X@S9T3
+R9
+31
+R10
+!i10b 1
+R20
+Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
+Z97 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 12 ripple_carry 0 22 c:T[_OcQda0N;EmHS<fze2
+l22
+L15
+V6aANdj84i==PfB68_N@`N3
+!s100 lo;;Y?^UQEQeWCO3nGD^91
+R9
+31
+R10
+!i10b 1
+R20
+R96
+R97
+!i113 1
+R14
+R15
+Etrin
+R70
+R5
+R6
+R0
+Z98 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
+Z99 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
+l0
+L6
+V3^=UTL66lAo[Zc29Y`UBR1
+!s100 09[YhPg2Q7CoUYLlSBnMB2
+R9
+31
+R19
+!i10b 1
+R20
+Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
+Z101 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 4 trin 0 22 3^=UTL66lAo[Zc29Y`UBR1
+l14
+L13
+VUNPXCA:^CdmT0L>^RH;nj2
+!s100 KkF5k=d^9m5`cKFZjo2Pg0
+R9
+31
+R19
+!i10b 1
+R20
+R100
+R101
+!i113 1
+R14
+R15

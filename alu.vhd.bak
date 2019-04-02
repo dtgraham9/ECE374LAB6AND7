@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.components.all;
+
+entity alu is
+	port(    X, Y : in std_logic_vector(3 downto 0);
+			add_sub : in std_logic;
+			  ALUOP : in std_logic_vector(1 downto 0);
+			      s : out std_logic_vector(3 downto 0);
+			  ZERO2 : out std_logic));
+			  
+architecture behaviour of alu is 
+	signal tempadd_sub, tempbitewiseAND, tempbitwiseOr, tempslt : out std_logic_vector(3 downto 0);
+	
+begin
+	bitewiseAND : 

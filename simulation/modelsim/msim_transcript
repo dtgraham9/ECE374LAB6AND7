@@ -1,0 +1,306 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do add_isa_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity trin
+# -- Compiling architecture Behavior of trin
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regN
+# -- Compiling architecture behavior of regN
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture LogicFunc of mux2to1
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fulladd
+# -- Compiling architecture LogicFunc of fulladd
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec2to4
+# -- Compiling architecture LogicFunc of dec2to4
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling package components
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg1
+# -- Compiling architecture behavior of reg1
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity alu
+# -- Compiling architecture behaviour of alu
+# End time: 00:23:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:44 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity ripple_carry
+# -- Compiling architecture struc_behaviour of ripple_carry
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity register_file
+# -- Compiling architecture struc_behaviour of register_file
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity mux4to1
+# -- Compiling architecture struc_behaviour of mux4to1
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity instruction_memory
+# -- Compiling architecture struc_behaviour of instruction_memory
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity instruction_decode
+# -- Compiling architecture struc_behaviour of instruction_decode
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity dec4to16
+# -- Compiling architecture struc_behaviour of dec4to16
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity add_isa
+# -- Compiling architecture behaviour of add_isa
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity bitwiseOR
+# -- Compiling architecture behaviour of bitwiseOR
+# End time: 00:23:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:45 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity bitwiseAND
+# -- Compiling architecture behaviour of bitwiseAND
+# End time: 00:23:46 on Apr 01,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:46 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity data_memory
+# -- Compiling architecture struc_behaviour of data_memory
+# End time: 00:23:46 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:23:46 on Apr 01,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package components
+# -- Compiling entity andgate
+# -- Compiling architecture behaviour of andgate
+# End time: 00:23:46 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.add_isa
+# vsim work.add_isa 
+# Start time: 00:23:58 on Apr 01,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.components
+# Loading work.add_isa(behaviour)
+# Loading work.mux2to1(logicfunc)
+# Loading work.regn(behavior)
+# Loading work.ripple_carry(struc_behaviour)
+# Loading work.fulladd(logicfunc)
+# Loading ieee.numeric_std(body)
+# Loading work.instruction_memory(struc_behaviour)
+# Loading work.dec4to16(struc_behaviour)
+# Loading work.dec2to4(logicfunc)
+# Loading work.trin(behavior)
+# Loading work.instruction_decode(struc_behaviour)
+# Loading work.register_file(struc_behaviour)
+# Loading work.mux4to1(struc_behaviour)
+# Loading work.reg1(behavior)
+# Loading work.alu(behaviour)
+# Loading work.bitwiseand(behaviour)
+# Loading work.bitwiseor(behaviour)
+# Loading work.data_memory(struc_behaviour)
+# Loading work.andgate(behaviour)
+do C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/simulation/modelsim/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 0
+add wave -position insertpoint  \
+sim:/add_isa/current_pc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mousam.hossain  Hostname: ECE207196386  ProcessID: 3720
+#           Attempting to use alternate WLF file "./wlftrwam5q".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrwam5q
+add wave -position insertpoint  \
+sim:/add_isa/result
+restart
+run
+# End time: 00:26:35 on Apr 01,2019, Elapsed time: 0:02:37
+# Errors: 0, Warnings: 2
+wave editwrite -file C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/simulation/modelsim/wave.do
