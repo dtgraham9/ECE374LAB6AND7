@@ -51,7 +51,7 @@ architecture behaviour of add_isa is
 	signal read_port1, read_port2, write_port : 			std_logic_vector(3 downto 0);
 	--- EX stage
 	signal memaddressoffset, writeregister : 				std_logic_vector(3 downto 0);
-	signal src1, src2, muxtoalu, sum, : 					std_logic_vector(3 downto 0);
+	signal src1, src2, muxtoalu, sum : 						std_logic_vector(3 downto 0);
 	--- MEM stage
 	signal value1, JUMPADDRESS, jmout : 					std_logic_vector(3 downto 0);
 	--- WB stage
@@ -62,7 +62,7 @@ architecture behaviour of add_isa is
 	signal IF_ID_ADDPC : 										std_logic_vector(3 downto 0);
 	-----ID_EX stage signals --------
 	signal ID_EX_ADDPC, ID_EX_SRC1, ID_EX_SRC2: 			std_logic_vector(3 downto 0); 
-	signal ID_EX_MEMADDRESSOFFSET, ID_EX_RD EX_MEM_RD: std_logic_vector(3 downto 0);
+	signal ID_EX_MEMADDRESSOFFSET, ID_EX_RD,EX_MEM_RD: std_logic_vector(3 downto 0);
 	--EX_MEM stage signals ----
 	signal EX_MEM_SUM, EX_MEM_SRC2, EX_MEM_ADDPC:  		std_logic_vector(3 downto 0);
 	signal EX_MEM_MEMADDRESSOFFSET : 						std_logic_vector(3 downto 0);
