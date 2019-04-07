@@ -18,6 +18,7 @@ source_file = 1, C:/Users/Graham/Documents/GitHub/ECE374LAB6AND7/bitwiseAND.vhd
 source_file = 1, C:/Users/Graham/Documents/GitHub/ECE374LAB6AND7/data_memory.vhd
 source_file = 1, C:/Users/Graham/Documents/GitHub/ECE374LAB6AND7/andgate.vhd
 source_file = 1, C:/Users/Graham/Documents/GitHub/ECE374LAB6AND7/reg1.vhd
+source_file = 1, C:/Users/Graham/Documents/GitHub/ECE374LAB6AND7/forwardingUnit.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd

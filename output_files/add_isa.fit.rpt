@@ -1,5 +1,5 @@
 Fitter report for add_isa
-Tue Apr 02 15:21:40 2019
+Sun Apr 07 18:11:02 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Apr 02 15:21:40 2019       ;
+; Fitter Status                      ; Successful - Sun Apr 07 18:11:02 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; add_isa                                     ;
 ; Top-level Entity Name              ; add_isa                                     ;
@@ -1801,18 +1801,18 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/Graham/Documents/GitHub/ECE374LAB6AND7/output_files/add_isa.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5742 megabytes
-    Info: Processing ended: Tue Apr 02 15:21:40 2019
+    Info: Peak virtual memory: 5744 megabytes
+    Info: Processing ended: Sun Apr 07 18:11:02 2019
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +----------------------------+
