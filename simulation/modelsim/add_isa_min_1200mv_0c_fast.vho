@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "04/07/2019 18:11:12"
+-- DATE "04/07/2019 18:12:50"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -80,8 +80,8 @@ ENTITY 	add_isa IS
     PORT (
 	clock : IN std_logic;
 	reset : IN std_logic;
-	current_pc : OUT std_logic_vector(3 DOWNTO 0);
-	result : OUT std_logic_vector(3 DOWNTO 0)
+	current_pc : BUFFER std_logic_vector(3 DOWNTO 0);
+	result : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END add_isa;
 

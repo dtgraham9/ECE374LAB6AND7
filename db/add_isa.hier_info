@@ -53,14 +53,14 @@ reset => reg1:EX_MEM_BRANCH24.reset
 reset => data_memory:dm1.reset
 reset => reg1:MEM_WB_REGWRITE27.reset
 reset => reg1:MEM_WB_MEMTOREG28.reset
-current_pc[0] <= regN:pc1.Q[0]
-current_pc[1] <= regN:pc1.Q[1]
-current_pc[2] <= regN:pc1.Q[2]
-current_pc[3] <= regN:pc1.Q[3]
-result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+current_pc[0] << regN:pc1.Q[0]
+current_pc[1] << regN:pc1.Q[1]
+current_pc[2] << regN:pc1.Q[2]
+current_pc[3] << regN:pc1.Q[3]
+result[0] << result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |add_isa|mux2to1:pc_mux1
