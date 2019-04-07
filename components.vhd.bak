@@ -75,11 +75,60 @@ component register_file is
 			value1, value2 : out std_logic_vector(3 downto 0));
 end component;
 
-------------- instrcution decode ----------------------------
+------------- instruction decode ----------------------------
 component instruction_decode is
 	port(instr : in std_logic_vector(31 downto 0);
 			MemRead, MemWrite, RegWrite, add_sub : out std_logic;
-			read_p1, read_p2, write_p : out std_logic_vector(3 downto 0));
+			read_p1, read_p2, write_p : out std_logic_vector(3 downto 0);
+			ALUOP : out std_logic_vector(1 downto 0);
+			ALUSRC : out std_logic;
+			memaddressoffset : out std_logic_vector(3 downto 0);
+			MemtoReg : out std_logic;
+			RegDst : out std_logic;
+			Branch : out std_logic;
+			Jump : out std_logic);
 end component;
 
-end components;
+-------------       alu         -----------------------------
+component alu is
+	port(src1, muxtoalu : in std_logic_vector(3 downto 0);
+		  add_sub : in std_logic;
+		  ALUOP : in std_logic_vector(1 downto 0);
+		  sum : out std_logic_vector(3 downto 0);
+		  ZERO2 : out std_logic);
+end component;
+
+-------------    bitewiseAND    -----------------------------
+component bitwiseAND is
+	port( src1, src2 : in std_logic_vector(3 downto 0);
+			sum : out std_logic_vector(3 downto 0));
+end component;
+
+-------------    bitewiseOR     -----------------------------
+component bitwiseOR is
+	port( src1, src2 : in std_logic_vector(3 downto 0);
+			sum : out std_logic_vector(3 downto 0));
+end component;
+
+-------------    data memory    -----------------------------
+component data_memory is
+	port(clock, reset, MemWrite : in std_logic;
+	                  sum, src2 : in std_logic_vector(3 downto 0);
+							   value1 : out std_logic_vector(3 downto 0));
+end component;
+
+-------------    andgate        -----------------------------
+component andgate is
+	port(Branch, ZERO2 : in std_logic;
+		branchmuxselect : out std_logic);
+
+end component;
+
+-------------    reg1           -----------------------------
+component reg1 is
+	port( clock, reset : in std_logic;
+                    D : in std_logic;
+						  Q : out std_logic);
+end component;
+
+end components; 
