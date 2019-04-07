@@ -1,4 +1,4 @@
--- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
 -- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
@@ -14,9 +14,9 @@
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+-- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "04/02/2019 15:21:51"
+-- DATE "04/01/2019 00:22:49"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -80,8 +80,8 @@ ENTITY 	add_isa IS
     PORT (
 	clock : IN std_logic;
 	reset : IN std_logic;
-	current_pc : OUT std_logic_vector(3 DOWNTO 0);
-	result : OUT std_logic_vector(3 DOWNTO 0)
+	current_pc : BUFFER std_logic_vector(3 DOWNTO 0);
+	result : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END add_isa;
 
@@ -272,14 +272,14 @@ SIGNAL \alu1|adder_subtractor1|stage4|s~0_combout\ : std_logic;
 SIGNAL \alu1|adder_subtractor1|stage4|s~combout\ : std_logic;
 SIGNAL \MEM_WB_SUM30|Q[3]~feeder_combout\ : std_logic;
 SIGNAL \pc1|Q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \MEM_WB_SUM30|Q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \rf1|r11|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \ID_EX_SRC14|Q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \MEM_WB_SUM30|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \rf1|r3|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \rf1|r9|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \IF_ID_INSTR1|Q\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \EX_MEM_SUM19|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \ID_EX_SRC25|Q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \rf1|r11|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \rf1|r7|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \rf1|r15|Q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \rf1|r5|Q\ : std_logic_vector(3 DOWNTO 0);

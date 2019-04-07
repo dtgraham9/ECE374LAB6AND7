@@ -24,9 +24,9 @@ VE^I>Yc=YfmnK`gH1=:dad3
 !s100 kHWE]SR:z2_TUOBafzRB[2
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1554096225
+Z10 !s110 1554236880
 !i10b 1
-Z11 !s108 1554096225.000000
+Z11 !s108 1554236880.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd|
 Z13 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd|
 !i113 1
@@ -69,9 +69,9 @@ V@U];P`ALcQYf6z9f319641
 !s100 @7Y0oN>VL4L>DE]TA>KQ?1
 R9
 31
-Z19 !s110 1554096224
+Z19 !s110 1554236879
 !i10b 1
-Z20 !s108 1554096224.000000
+Z20 !s108 1554236879.000000
 Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd|
 Z22 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd|
 !i113 1
@@ -114,9 +114,9 @@ V4LnA[iJdImSbYRbT<V=Xl3
 !s100 A>COlbHeUPEZ=NLUY]Pa50
 R9
 31
-Z26 !s110 1554096226
+Z26 !s110 1554236881
 !i10b 1
-Z27 !s108 1554096226.000000
+Z27 !s108 1554236881.000000
 Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd|
 Z29 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd|
 !i113 1
@@ -159,9 +159,9 @@ V_g<W7VC:o=?gNO5NG0Mh@3
 !s100 aVOoGLBn]0eE<FG_YMd6N1
 R9
 31
-R10
+R26
 !i10b 1
-R11
+R27
 Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd|
 Z34 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd|
 !i113 1
@@ -180,9 +180,9 @@ V[_P:B]gXA7d^8XjgX`X4P1
 !s100 N7[nD@[0l<YHPADRd:B[J0
 R9
 31
-R10
+R26
 !i10b 1
-R11
+R27
 R33
 R34
 !i113 1
@@ -314,11 +314,11 @@ V7obXTbi9S>EeXNbj1:@Bf2
 !s100 NbZK8dGF6nXNm>[=`JC>_0
 R9
 31
-R19
+Z48 !s110 1554236878
 !i10b 1
-R20
-Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
-Z49 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
+Z49 !s108 1554236878.000000
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
+Z51 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
 !i113 1
 R14
 R15
@@ -332,11 +332,11 @@ VhN8DPKlKgnC?VE[1n^h@G0
 !s100 LmmfXEm2d@d@EW5E?AC=j3
 R9
 31
-R19
-!i10b 1
-R20
 R48
+!i10b 1
 R49
+R50
+R51
 !i113 1
 R14
 R15
@@ -348,8 +348,8 @@ R4
 R5
 R6
 R0
-Z50 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
-Z51 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
+Z52 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
+Z53 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
 l0
 L7
 V0YDY9ROXNa`nXSJLmbm1m0
@@ -359,8 +359,8 @@ R9
 R10
 !i10b 1
 R11
-Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
-Z53 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
+Z55 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
 !i113 1
 R14
 R15
@@ -380,29 +380,29 @@ R9
 R10
 !i10b 1
 R11
-R52
-R53
+R54
+R55
 !i113 1
 R14
 R15
 Efulladd
-Z54 w1548795820
+Z56 w1548795820
 R5
 R6
 R0
-Z55 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
-Z56 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
+Z57 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
+Z58 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
 l0
 L6
 VziY8cfTYCVz8^A`EWKZ2^1
 !s100 cXj=L=BeW98zYAJRLH9@j1
 R9
 31
-R19
+R48
 !i10b 1
-R20
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
-Z58 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
+R49
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
+Z60 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
 !i113 1
 R14
 R15
@@ -416,24 +416,24 @@ V;4A99eQYCR7B]KEjGZg0E2
 !s100 3Td1GOE:Li?fBdDZM`>ez2
 R9
 31
-R19
+R48
 !i10b 1
-R20
-R57
-R58
+R49
+R59
+R60
 !i113 1
 R14
 R15
 Einstruction_decode
-Z59 w1551822166
+Z61 w1551822166
 R2
 R3
 R4
 R5
 R6
 R0
-Z60 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
-Z61 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
+Z62 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
+Z63 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
 l0
 L6
 VI5S8=f=@<;onK3agJ^o_61
@@ -443,8 +443,8 @@ R9
 R10
 !i10b 1
 R11
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
-Z63 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
+Z65 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
 !i113 1
 R14
 R15
@@ -464,22 +464,22 @@ R9
 R10
 !i10b 1
 R11
-R62
-R63
+R64
+R65
 !i113 1
 R14
 R15
 Einstruction_memory
-Z64 w1554096117
+Z66 w1554096117
 R2
 R3
 R4
-Z65 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z67 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R5
 R6
 R0
-Z66 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
-Z67 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
+Z68 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
+Z69 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
 l0
 L8
 V<LM=NWoj7SeK`WOZ:ge102
@@ -489,8 +489,8 @@ R9
 R10
 !i10b 1
 R11
-Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
-Z69 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
+Z71 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
 !i113 1
 R14
 R15
@@ -498,7 +498,7 @@ Astruc_behaviour
 R2
 R3
 R4
-R65
+R67
 R5
 R6
 DEx4 work 18 instruction_memory 0 22 <LM=NWoj7SeK`WOZ:ge102
@@ -511,29 +511,29 @@ R9
 R10
 !i10b 1
 R11
-R68
-R69
+R70
+R71
 !i113 1
 R14
 R15
 Emux2to1
-Z70 w1548007894
+Z72 w1548007894
 R5
 R6
 R0
-Z71 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
-Z72 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
+Z73 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
+Z74 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
 l0
 L6
 V]F]hTDio`OR<=VY3ZSjfn2
 !s100 2Y]BJOJ>nfG@D@kF6<KcB0
 R9
 31
-R19
+R48
 !i10b 1
-R20
-Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
-Z74 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
+R49
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
+Z76 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
 !i113 1
 R14
 R15
@@ -547,35 +547,35 @@ Vm2f86Nge<14h;NWU_K>[>1
 !s100 ;W^SCehM[9I;kQINc0CEK0
 R9
 31
-R19
+R48
 !i10b 1
-R20
-R73
-R74
+R49
+R75
+R76
 !i113 1
 R14
 R15
 Emux4to1
-R70
+R72
 R2
 R3
 R4
 R5
 R6
 R0
-Z75 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
-Z76 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
+Z77 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
+Z78 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
 l0
 L6
 V81WhnCONI:cWkiKH_1fkR1
 !s100 nT:OzDKVMaJZ1zaY`OLXK2
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
-Z78 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
+R20
+Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
+Z80 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
 !i113 1
 R14
 R15
@@ -592,21 +592,21 @@ VkD?H>aM:]4=h8BFlGTZP00
 !s100 <lJc1_mQ>`X>fQB]PmRX52
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R77
-R78
+R20
+R79
+R80
 !i113 1
 R14
 R15
 Ereg1
-Z79 w1553724751
+Z81 w1553724751
 R5
 R6
 R0
-Z80 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
-Z81 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
+Z82 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
+Z83 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
 l0
 L4
 VTNFC6:B[H4CSBC@Bf`ij[1
@@ -616,8 +616,8 @@ R9
 R19
 !i10b 1
 R20
-Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
-Z83 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
+Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
+Z85 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
 !i113 1
 R14
 R15
@@ -634,32 +634,32 @@ R9
 R19
 !i10b 1
 R20
-R82
-R83
+R84
+R85
 !i113 1
 R14
 R15
 Eregister_file
-Z84 w1554096119
+Z86 w1554096119
 R2
 R3
 R4
 R5
 R6
 R0
-Z85 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
-Z86 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
+Z87 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
+Z88 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
 l0
 L6
 Ve7HQgG3ff8;CjnQSG<FQb1
 !s100 [Th0f3?l;UUR2KNP]lJ6a2
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
-Z88 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
+R20
+Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
+Z90 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
 !i113 1
 R14
 R15
@@ -676,32 +676,32 @@ VJL6E;l9o7nnmQUE>UAi=j1
 !s100 eYBzn=zeJgK;ZDKm`H>L53
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R87
-R88
+R20
+R89
+R90
 !i113 1
 R14
 R15
 Eregn
-R70
+R72
 R5
 R6
 R0
-Z89 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
-Z90 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
+Z91 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
+Z92 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
 l0
 L5
 V<n2ab<HDD_k2>QBCPM]9>3
 !s100 9WISHEa<GU>hb:hkoFU>l1
 R9
 31
-R19
+R48
 !i10b 1
-R20
-Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
-Z92 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
+R49
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
+Z94 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
 !i113 1
 R14
 R15
@@ -715,35 +715,35 @@ V6fP>odf>[FfYhH6bzlTP=2
 !s100 H_Fd<a^^4ZRKjV6>Zi4<R0
 R9
 31
-R19
+R48
 !i10b 1
-R20
-R91
-R92
+R49
+R93
+R94
 !i113 1
 R14
 R15
 Eripple_carry
-Z93 w1549402782
+Z95 w1549402782
 R2
 R3
 R4
 R5
 R6
 R0
-Z94 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
-Z95 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
+Z96 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
+Z97 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
 l0
 L8
 Vc:T[_OcQda0N;EmHS<fze2
 !s100 NecK9P_@beN7`aT5X@S9T3
 R9
 31
-R10
+R19
 !i10b 1
 R20
-Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
-Z97 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
+Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
+Z99 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
 !i113 1
 R14
 R15
@@ -760,32 +760,32 @@ V6aANdj84i==PfB68_N@`N3
 !s100 lo;;Y?^UQEQeWCO3nGD^91
 R9
 31
-R10
+R19
 !i10b 1
 R20
-R96
-R97
+R98
+R99
 !i113 1
 R14
 R15
 Etrin
-R70
+R72
 R5
 R6
 R0
-Z98 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
-Z99 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
+Z100 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
+Z101 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
 l0
 L6
 V3^=UTL66lAo[Zc29Y`UBR1
 !s100 09[YhPg2Q7CoUYLlSBnMB2
 R9
 31
-R19
+Z102 !s110 1554236877
 !i10b 1
-R20
-Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
-Z101 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
+Z103 !s108 1554236877.000000
+Z104 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
+Z105 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
 !i113 1
 R14
 R15
@@ -799,11 +799,11 @@ VUNPXCA:^CdmT0L>^RH;nj2
 !s100 KkF5k=d^9m5`cKFZjo2Pg0
 R9
 31
-R19
+R102
 !i10b 1
-R20
-R100
-R101
+R103
+R104
+R105
 !i113 1
 R14
 R15
