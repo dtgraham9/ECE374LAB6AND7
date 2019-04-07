@@ -1,13 +1,13 @@
-Timing Analyzer report for add_isa
-Tue Apr 02 15:21:49 2019
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+TimeQuest Timing Analyzer report for add_isa
+Mon Apr 01 00:22:47 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Timing Analyzer Summary
+  2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
   4. Clocks
   5. Slow 1200mV 85C Model Fmax Summary
@@ -53,14 +53,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  45. Unconstrained Output Ports
  46. Unconstrained Input Ports
  47. Unconstrained Output Ports
- 48. Timing Analyzer Messages
+ 48. TimeQuest Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -77,10 +77,10 @@ refer to the applicable agreement for further details.
 
 
 +-----------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                     ;
+; TimeQuest Timing Analyzer Summary                                           ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
 ; Revision Name         ; add_isa                                             ;
 ; Device Family         ; Cyclone IV E                                        ;
 ; Device Name           ; EP4CE115F29C7                                       ;
@@ -95,17 +95,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   3.0%      ;
-;     Processor 3            ;   2.5%      ;
-;     Processor 4            ;   2.3%      ;
 +----------------------------+-------------+
 
 
@@ -286,9 +284,10 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.440 ; regN:pc1|Q[2]                   ; regN:pc1|Q[2]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; regN:pc1|Q[1]                   ; regN:pc1|Q[1]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; regN:pc1|Q[3]                   ; regN:pc1|Q[3]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; regN:pc1|Q[2]                   ; regN:pc1|Q[2]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; regN:pc1|Q[3]                   ; regN:pc1|Q[3]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; regN:pc1|Q[1]                   ; regN:pc1|Q[1]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.445 ; regN:pc1|Q[0]                   ; regN:pc1|Q[0]                   ; clock        ; clock       ; 0.000        ; 0.043      ; 0.674      ;
 ; 0.461 ; regN:ID_EX_SRC14|Q[1]           ; regN:EX_MEM_SUM19|Q[1]          ; clock        ; clock       ; 0.000        ; 0.047      ; 0.694      ;
 ; 0.462 ; regN:IF_ID_INSTR1|Q[11]         ; regN:ID_EX_RD9|Q[0]             ; clock        ; clock       ; 0.000        ; 0.047      ; 0.695      ;
@@ -360,8 +359,8 @@ No paths to report.
 ; 1.239 ; register_file:rf1|regN:r13|Q[0] ; regN:ID_EX_SRC25|Q[0]           ; clock        ; clock       ; 0.000        ; 0.161      ; 1.586      ;
 ; 1.251 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[17]         ; clock        ; clock       ; 0.000        ; 0.049      ; 1.486      ;
 ; 1.259 ; regN:pc1|Q[0]                   ; regN:IF_ID_INSTR1|Q[17]         ; clock        ; clock       ; 0.000        ; 0.049      ; 1.494      ;
-; 1.263 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[18]         ; clock        ; clock       ; 0.000        ; 0.157      ; 1.606      ;
 ; 1.263 ; regN:pc1|Q[0]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.280      ; 1.729      ;
+; 1.263 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[18]         ; clock        ; clock       ; 0.000        ; 0.157      ; 1.606      ;
 ; 1.273 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[19]         ; clock        ; clock       ; 0.000        ; 0.157      ; 1.616      ;
 ; 1.274 ; regN:MEM_WB_SUM30|Q[2]          ; register_file:rf1|regN:r5|Q[2]  ; clock        ; clock       ; 0.000        ; 0.145      ; 1.605      ;
 ; 1.277 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.280      ; 1.743      ;
@@ -558,13 +557,13 @@ No paths to report.
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.387 ; regN:pc1|Q[1]                   ; regN:pc1|Q[1]                   ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; regN:pc1|Q[3]                   ; regN:pc1|Q[3]                   ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; regN:pc1|Q[2]                   ; regN:pc1|Q[2]                   ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; regN:pc1|Q[3]                   ; regN:pc1|Q[3]                   ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.398 ; regN:pc1|Q[0]                   ; regN:pc1|Q[0]                   ; clock        ; clock       ; 0.000        ; 0.039      ; 0.608      ;
 ; 0.415 ; regN:ID_EX_SRC14|Q[1]           ; regN:EX_MEM_SUM19|Q[1]          ; clock        ; clock       ; 0.000        ; 0.044      ; 0.630      ;
+; 0.425 ; regN:EX_MEM_SUM19|Q[2]          ; regN:MEM_WB_SUM30|Q[2]          ; clock        ; clock       ; 0.000        ; 0.043      ; 0.639      ;
 ; 0.425 ; regN:IF_ID_INSTR1|Q[13]         ; regN:ID_EX_RD9|Q[2]             ; clock        ; clock       ; 0.000        ; 0.043      ; 0.639      ;
 ; 0.425 ; regN:IF_ID_INSTR1|Q[11]         ; regN:ID_EX_RD9|Q[0]             ; clock        ; clock       ; 0.000        ; 0.043      ; 0.639      ;
-; 0.425 ; regN:EX_MEM_SUM19|Q[2]          ; regN:MEM_WB_SUM30|Q[2]          ; clock        ; clock       ; 0.000        ; 0.043      ; 0.639      ;
 ; 0.426 ; regN:IF_ID_INSTR1|Q[12]         ; regN:ID_EX_RD9|Q[1]             ; clock        ; clock       ; 0.000        ; 0.043      ; 0.640      ;
 ; 0.427 ; regN:EX_MEM_SUM19|Q[0]          ; regN:MEM_WB_SUM30|Q[0]          ; clock        ; clock       ; 0.000        ; 0.043      ; 0.641      ;
 ; 0.454 ; regN:pc1|Q[2]                   ; regN:pc1|Q[3]                   ; clock        ; clock       ; 0.000        ; 0.046      ; 0.671      ;
@@ -615,8 +614,8 @@ No paths to report.
 ; 1.028 ; regN:pc1|Q[1]                   ; regN:IF_ID_INSTR1|Q[17]         ; clock        ; clock       ; 0.000        ; 0.030      ; 1.229      ;
 ; 1.035 ; register_file:rf1|regN:r3|Q[0]  ; regN:ID_EX_SRC25|Q[0]           ; clock        ; clock       ; 0.000        ; 0.117      ; 1.323      ;
 ; 1.040 ; regN:pc1|Q[2]                   ; regN:IF_ID_INSTR1|Q[18]         ; clock        ; clock       ; 0.000        ; 0.140      ; 1.351      ;
-; 1.042 ; regN:pc1|Q[0]                   ; regN:IF_ID_INSTR1|Q[19]         ; clock        ; clock       ; 0.000        ; 0.140      ; 1.353      ;
 ; 1.042 ; register_file:rf1|regN:r4|Q[1]  ; regN:ID_EX_SRC14|Q[1]           ; clock        ; clock       ; 0.000        ; 0.087      ; 1.300      ;
+; 1.042 ; regN:pc1|Q[0]                   ; regN:IF_ID_INSTR1|Q[19]         ; clock        ; clock       ; 0.000        ; 0.140      ; 1.353      ;
 ; 1.051 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[11]         ; clock        ; clock       ; 0.000        ; 0.250      ; 1.472      ;
 ; 1.053 ; regN:pc1|Q[2]                   ; regN:IF_ID_INSTR1|Q[19]         ; clock        ; clock       ; 0.000        ; 0.140      ; 1.364      ;
 ; 1.058 ; register_file:rf1|regN:r3|Q[2]  ; regN:ID_EX_SRC25|Q[2]           ; clock        ; clock       ; 0.000        ; 0.117      ; 1.346      ;
@@ -635,8 +634,8 @@ No paths to report.
 ; 1.156 ; regN:MEM_WB_SUM30|Q[2]          ; register_file:rf1|regN:r5|Q[2]  ; clock        ; clock       ; 0.000        ; 0.141      ; 1.468      ;
 ; 1.168 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[19]         ; clock        ; clock       ; 0.000        ; 0.140      ; 1.479      ;
 ; 1.169 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[17]         ; clock        ; clock       ; 0.000        ; 0.030      ; 1.370      ;
-; 1.173 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.250      ; 1.594      ;
 ; 1.173 ; regN:ID_EX_SRC14|Q[2]           ; regN:EX_MEM_SUM19|Q[3]          ; clock        ; clock       ; 0.000        ; 0.196      ; 1.540      ;
+; 1.173 ; regN:pc1|Q[3]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.250      ; 1.594      ;
 ; 1.175 ; register_file:rf1|regN:r3|Q[3]  ; regN:ID_EX_SRC25|Q[3]           ; clock        ; clock       ; 0.000        ; 0.117      ; 1.463      ;
 ; 1.175 ; regN:MEM_WB_SUM30|Q[0]          ; register_file:rf1|regN:r5|Q[0]  ; clock        ; clock       ; 0.000        ; 0.141      ; 1.487      ;
 ; 1.185 ; regN:pc1|Q[0]                   ; regN:IF_ID_INSTR1|Q[0]          ; clock        ; clock       ; 0.000        ; 0.250      ; 1.606      ;
@@ -818,9 +817,9 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.201 ; regN:pc1|Q[1]                   ; regN:pc1|Q[1]                   ; clock        ; clock       ; 0.000        ; 0.022      ; 0.307      ;
 ; 0.201 ; regN:pc1|Q[2]                   ; regN:pc1|Q[2]                   ; clock        ; clock       ; 0.000        ; 0.022      ; 0.307      ;
 ; 0.201 ; regN:pc1|Q[3]                   ; regN:pc1|Q[3]                   ; clock        ; clock       ; 0.000        ; 0.022      ; 0.307      ;
-; 0.201 ; regN:pc1|Q[1]                   ; regN:pc1|Q[1]                   ; clock        ; clock       ; 0.000        ; 0.022      ; 0.307      ;
 ; 0.206 ; regN:EX_MEM_SUM19|Q[2]          ; regN:MEM_WB_SUM30|Q[2]          ; clock        ; clock       ; 0.000        ; 0.024      ; 0.314      ;
 ; 0.207 ; regN:ID_EX_SRC14|Q[1]           ; regN:EX_MEM_SUM19|Q[1]          ; clock        ; clock       ; 0.000        ; 0.026      ; 0.317      ;
 ; 0.207 ; regN:IF_ID_INSTR1|Q[13]         ; regN:ID_EX_RD9|Q[2]             ; clock        ; clock       ; 0.000        ; 0.023      ; 0.314      ;
@@ -852,8 +851,8 @@ No paths to report.
 ; 0.441 ; regN:pc1|Q[2]                   ; regN:IF_ID_INSTR1|Q[12]         ; clock        ; clock       ; 0.000        ; 0.133      ; 0.658      ;
 ; 0.447 ; regN:pc1|Q[2]                   ; regN:IF_ID_INSTR1|Q[0]          ; clock        ; clock       ; 0.000        ; 0.133      ; 0.664      ;
 ; 0.451 ; regN:pc1|Q[2]                   ; regN:IF_ID_INSTR1|Q[17]         ; clock        ; clock       ; 0.000        ; 0.033      ; 0.568      ;
-; 0.457 ; regN:MEM_WB_SUM30|Q[1]          ; register_file:rf1|regN:r12|Q[1] ; clock        ; clock       ; 0.000        ; 0.084      ; 0.625      ;
 ; 0.457 ; regN:EX_MEM_RD18|Q[1]           ; regN:MEM_WB_RD31|Q[1]           ; clock        ; clock       ; 0.000        ; 0.011      ; 0.552      ;
+; 0.457 ; regN:MEM_WB_SUM30|Q[1]          ; register_file:rf1|regN:r12|Q[1] ; clock        ; clock       ; 0.000        ; 0.084      ; 0.625      ;
 ; 0.460 ; regN:EX_MEM_RD18|Q[0]           ; regN:MEM_WB_RD31|Q[0]           ; clock        ; clock       ; 0.000        ; 0.011      ; 0.555      ;
 ; 0.464 ; regN:pc1|Q[2]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.133      ; 0.681      ;
 ; 0.467 ; regN:EX_MEM_SUM19|Q[1]          ; regN:MEM_WB_SUM30|Q[1]          ; clock        ; clock       ; 0.000        ; -0.023     ; 0.528      ;
@@ -876,10 +875,11 @@ No paths to report.
 ; 0.516 ; regN:pc1|Q[1]                   ; regN:IF_ID_INSTR1|Q[17]         ; clock        ; clock       ; 0.000        ; 0.033      ; 0.633      ;
 ; 0.516 ; regN:pc1|Q[1]                   ; regN:IF_ID_INSTR1|Q[0]          ; clock        ; clock       ; 0.000        ; 0.133      ; 0.733      ;
 ; 0.527 ; register_file:rf1|regN:r15|Q[1] ; regN:ID_EX_SRC25|Q[1]           ; clock        ; clock       ; 0.000        ; 0.079      ; 0.690      ;
-; 0.528 ; register_file:rf1|regN:r5|Q[3]  ; regN:ID_EX_SRC25|Q[3]           ; clock        ; clock       ; 0.000        ; 0.052      ; 0.664      ;
 ; 0.528 ; register_file:rf1|regN:r3|Q[0]  ; regN:ID_EX_SRC25|Q[0]           ; clock        ; clock       ; 0.000        ; 0.064      ; 0.676      ;
+; 0.528 ; register_file:rf1|regN:r5|Q[3]  ; regN:ID_EX_SRC25|Q[3]           ; clock        ; clock       ; 0.000        ; 0.052      ; 0.664      ;
 ; 0.531 ; regN:pc1|Q[1]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.133      ; 0.748      ;
 ; 0.531 ; regN:ID_EX_SRC14|Q[3]           ; regN:EX_MEM_SUM19|Q[3]          ; clock        ; clock       ; 0.000        ; 0.077      ; 0.692      ;
+; 0.531 ; regN:pc1|Q[1]                   ; regN:IF_ID_INSTR1|Q[13]         ; clock        ; clock       ; 0.000        ; 0.133      ; 0.748      ;
 ; 0.534 ; regN:EX_MEM_RD18|Q[2]           ; regN:MEM_WB_RD31|Q[2]           ; clock        ; clock       ; 0.000        ; 0.011      ; 0.629      ;
 ; 0.539 ; register_file:rf1|regN:r3|Q[2]  ; regN:ID_EX_SRC25|Q[2]           ; clock        ; clock       ; 0.000        ; 0.064      ; 0.687      ;
 ; 0.541 ; register_file:rf1|regN:r4|Q[1]  ; regN:ID_EX_SRC14|Q[1]           ; clock        ; clock       ; 0.000        ; 0.050      ; 0.675      ;
@@ -1129,29 +1129,29 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------+---------------------------------------------------------------------------------------+
 
 
-+--------------------------+
-; Timing Analyzer Messages ;
-+--------------------------+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 02 15:21:46 2019
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Apr 01 00:22:44 2019
 Info: Command: quartus_sta add_isa -c add_isa
-Info: qsta_default_script.tcl version: #1
+Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'add_isa.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'add_isa.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clock clock
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -2.517
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1172,7 +1172,7 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -2.241
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1191,7 +1191,7 @@ Warning (18330): Ignoring Synchronizer Identification setting Off, and using Aut
 Info: Analyzing Fast 1200mV 0C Model
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -0.718
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1209,9 +1209,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Tue Apr 02 15:21:49 2019
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Mon Apr 01 00:22:47 2019
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
