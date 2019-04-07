@@ -1,33 +1,33 @@
 |add_isa
 clock => regN:pc1.clock
 clock => instruction_memory:im1.clock
-clock => regN:IF_ID_ADDPC2.clock
 clock => regN:IF_ID_INSTR1.clock
+clock => regN:IF_ID_ADDPC2.clock
 clock => register_file:rf1.clock
+clock => regN:ID_EX_ADDPC3.clock
+clock => regN:ID_EX_SRC14.clock
+clock => regN:ID_EX_SRC25.clock
+clock => regN:ID_EX_MEMADDRESSOFFSET6.clock
 clock => reg1:ID_EX_ALUSRC7.clock
+clock => regN:ID_EX_ALUOP8.clock
+clock => regN:ID_EX_RD9.clock
 clock => reg1:ID_EX_ADDSUB10.clock
 clock => reg1:ID_EX_MEMWRITE11.clock
 clock => reg1:ID_EX_REGWRITE12.clock
 clock => reg1:ID_EX_MEMTOREG13.clock
 clock => reg1:ID_EX_BRANCH14.clock
 clock => reg1:ID_EX_MEMREAD15.clock
-clock => regN:ID_EX_ALUOP8.clock
-clock => regN:ID_EX_ADDPC3.clock
-clock => regN:ID_EX_SRC14.clock
-clock => regN:ID_EX_SRC25.clock
-clock => regN:ID_EX_MEMADDROFF6.clock
-clock => regN:ID_EX_RD9.clock
 clock => reg1:EX_MEM_REGWRITE16.clock
 clock => reg1:EX_MEM_MEMTOREG17.clock
+clock => regN:EX_MEM_RD18.clock
+clock => regN:EX_MEM_SUM19.clock
 clock => reg1:EX_MEM_ZERO220.clock
 clock => reg1:EX_MEM_MEMWRITE21.clock
 clock => reg1:EX_MEM_MEMREAD22.clock
+clock => regN:EX_MEM_SRC223.clock
 clock => reg1:EX_MEM_BRANCH24.clock
 clock => regN:EX_MEM_ADDPC25.clock
-clock => regN:EX_MEM_MEMADDROFF26.clock
-clock => regN:EX_MEM_RD18.clock
-clock => regN:EX_MEM_SUM19.clock
-clock => regN:EX_MEM_SRC223.clock
+clock => regN:EX_MEM_MEMADDRESSOFFSET26.clock
 clock => data_memory:dm1.clock
 clock => reg1:MEM_WB_REGWRITE27.clock
 clock => reg1:MEM_WB_MEMTOREG28.clock
@@ -53,14 +53,14 @@ reset => reg1:EX_MEM_BRANCH24.reset
 reset => data_memory:dm1.reset
 reset => reg1:MEM_WB_REGWRITE27.reset
 reset => reg1:MEM_WB_MEMTOREG28.reset
-current_pc[0] <= regN:pc1.Q[0]
-current_pc[1] <= regN:pc1.Q[1]
-current_pc[2] <= regN:pc1.Q[2]
-current_pc[3] <= regN:pc1.Q[3]
-result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+current_pc[0] << regN:pc1.Q[0]
+current_pc[1] << regN:pc1.Q[1]
+current_pc[2] << regN:pc1.Q[2]
+current_pc[3] << regN:pc1.Q[3]
+result[0] << result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |add_isa|mux2to1:pc_mux1
@@ -6130,21 +6130,6 @@ F[30] <= F[30].DB_MAX_OUTPUT_PORT_TYPE
 F[31] <= F[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|add_isa|regN:IF_ID_ADDPC2
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |add_isa|regN:IF_ID_INSTR1
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
@@ -6242,6 +6227,21 @@ Q[28] <= Q[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[29] <= Q[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[30] <= Q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[31] <= Q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:IF_ID_ADDPC2
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |add_isa|instruction_decode:id1
@@ -9056,12 +9056,96 @@ F[2] <= F[2].DB_MAX_OUTPUT_PORT_TYPE
 F[3] <= F[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
+|add_isa|regN:ID_EX_ADDPC3
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:ID_EX_SRC14
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:ID_EX_SRC25
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:ID_EX_MEMADDRESSOFFSET6
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |add_isa|reg1:ID_EX_ALUSRC7
 clock => Q~reg0.CLK
 reset => Q.OUTPUTSELECT
 reset => Q.OUTPUTSELECT
 D => Q.DATAA
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:ID_EX_ALUOP8
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:ID_EX_RD9
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |add_isa|reg1:ID_EX_ADDSUB10
@@ -9110,90 +9194,6 @@ reset => Q.OUTPUTSELECT
 reset => Q.OUTPUTSELECT
 D => Q.DATAA
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:ID_EX_ALUOP8
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:ID_EX_ADDPC3
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:ID_EX_SRC14
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:ID_EX_SRC25
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:ID_EX_MEMADDROFF6
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:ID_EX_RD9
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |add_isa|mux2to1:alusrcmux1
@@ -9495,68 +9495,6 @@ D => Q.DATAA
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|add_isa|reg1:EX_MEM_ZERO220
-clock => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-reset => Q.OUTPUTSELECT
-D => Q.DATAA
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|reg1:EX_MEM_MEMWRITE21
-clock => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-reset => Q.OUTPUTSELECT
-D => Q.DATAA
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|reg1:EX_MEM_MEMREAD22
-clock => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-reset => Q.OUTPUTSELECT
-D => Q.DATAA
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|reg1:EX_MEM_BRANCH24
-clock => Q~reg0.CLK
-reset => Q.OUTPUTSELECT
-reset => Q.OUTPUTSELECT
-D => Q.DATAA
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:EX_MEM_ADDPC25
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|add_isa|regN:EX_MEM_MEMADDROFF26
-clock => Q[0]~reg0.CLK
-clock => Q[1]~reg0.CLK
-clock => Q[2]~reg0.CLK
-clock => Q[3]~reg0.CLK
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |add_isa|regN:EX_MEM_RD18
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
@@ -9587,7 +9525,69 @@ Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|add_isa|reg1:EX_MEM_ZERO220
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+D => Q.DATAA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|reg1:EX_MEM_MEMWRITE21
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+D => Q.DATAA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|reg1:EX_MEM_MEMREAD22
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+D => Q.DATAA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |add_isa|regN:EX_MEM_SRC223
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|reg1:EX_MEM_BRANCH24
+clock => Q~reg0.CLK
+reset => Q.OUTPUTSELECT
+reset => Q.OUTPUTSELECT
+D => Q.DATAA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:EX_MEM_ADDPC25
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_isa|regN:EX_MEM_MEMADDRESSOFFSET26
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
 clock => Q[2]~reg0.CLK

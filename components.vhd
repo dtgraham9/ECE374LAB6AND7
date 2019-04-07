@@ -131,4 +131,10 @@ component reg1 is
 						  Q : out std_logic);
 end component;
 
+component forwardingUnit is 
+	port(MEM_WB_Regwrite, EX_MEM_Regwrite : 	in std_logic;
+	MEM_WB_Rd, EX_MEM_Rd, ID_EX_Rs, ID_EX_Rt: in std_logic_vector(4 downto 0);
+	ForwardA, ForwardB : 							out std_logic_vector(1 downto 0));
+end component;
+
 end components; 
