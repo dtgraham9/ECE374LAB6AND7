@@ -7,28 +7,28 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/simulation/modelsim
+Z0 dC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/simulation/modelsim
 Eadd_isa
-Z1 w1554088118
+Z1 w1554684600
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
-Z4 DPx4 work 10 components 0 22 WZWI43NEN:jMD1<]2DlEO1
+Z4 DPx4 work 10 components 0 22 kNYo7=g:jg<Fdlm7WPLQ23
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z7 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd
-Z8 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd
+Z7 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/add_isa.vhd
+Z8 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/add_isa.vhd
 l0
 L5
 VE^I>Yc=YfmnK`gH1=:dad3
 !s100 kHWE]SR:z2_TUOBafzRB[2
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1554236880
+Z10 !s110 1554684968
 !i10b 1
-Z11 !s108 1554236880.000000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd|
-Z13 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/add_isa.vhd|
+Z11 !s108 1554684968.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/add_isa.vhd|
+Z13 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/add_isa.vhd|
 !i113 1
 Z14 o-93 -work work
 Z15 tExplicit 1 CvgOpt 0
@@ -39,10 +39,10 @@ R4
 R5
 R6
 DEx4 work 7 add_isa 0 22 E^I>Yc=YfmnK`gH1=:dad3
-l53
+l75
 L10
-VGbC@Wm2:azm8fLD@MR71U1
-!s100 0?QJXAA[=M3KR7:F_Tmm_1
+VkDT]0CF>Cej7;EX[BSKS12
+!s100 XcUBE:Af@4cEl9zQOS^8g2
 R9
 31
 R10
@@ -61,19 +61,19 @@ R4
 R5
 R6
 R0
-Z17 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd
-Z18 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd
+Z17 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/alu.vhd
+Z18 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/alu.vhd
 l0
 L5
 V@U];P`ALcQYf6z9f319641
 !s100 @7Y0oN>VL4L>DE]TA>KQ?1
 R9
 31
-Z19 !s110 1554236879
+Z19 !s110 1554684967
 !i10b 1
-Z20 !s108 1554236879.000000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd|
-Z22 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/alu.vhd|
+Z20 !s108 1554684967.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/alu.vhd|
+Z22 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/alu.vhd|
 !i113 1
 R14
 R15
@@ -106,19 +106,19 @@ R4
 R5
 R6
 R0
-Z24 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd
-Z25 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd
+Z24 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/andgate.vhd
+Z25 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/andgate.vhd
 l0
 L5
 V4LnA[iJdImSbYRbT<V=Xl3
 !s100 A>COlbHeUPEZ=NLUY]Pa50
 R9
 31
-Z26 !s110 1554236881
+R10
 !i10b 1
-Z27 !s108 1554236881.000000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd|
-Z29 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/andgate.vhd|
+R11
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/andgate.vhd|
+Z27 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/andgate.vhd|
 !i113 1
 R14
 R15
@@ -135,35 +135,35 @@ V3j]JiYzZf[ELWaCk`]?5X1
 !s100 bm?z8nQDWGimbOB5HCQ:j3
 R9
 31
-R26
+R10
 !i10b 1
+R11
+R26
 R27
-R28
-R29
 !i113 1
 R14
 R15
 Ebitwiseand
-Z30 w1550032124
+Z28 w1550032124
 R2
 R3
 R4
 R5
 R6
 R0
-Z31 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd
-Z32 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd
+Z29 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseAND.vhd
+Z30 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseAND.vhd
 l0
 L5
 V_g<W7VC:o=?gNO5NG0Mh@3
 !s100 aVOoGLBn]0eE<FG_YMd6N1
 R9
 31
-R26
+R10
 !i10b 1
-R27
-Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd|
-Z34 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseAND.vhd|
+R11
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseAND.vhd|
+Z32 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseAND.vhd|
 !i113 1
 R14
 R15
@@ -180,24 +180,24 @@ V[_P:B]gXA7d^8XjgX`X4P1
 !s100 N7[nD@[0l<YHPADRd:B[J0
 R9
 31
-R26
+R10
 !i10b 1
-R27
-R33
-R34
+R11
+R31
+R32
 !i113 1
 R14
 R15
 Ebitwiseor
-Z35 w1550032127
+Z33 w1550032127
 R2
 R3
 R4
 R5
 R6
 R0
-Z36 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd
-Z37 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd
+Z34 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseOR.vhd
+Z35 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseOR.vhd
 l0
 L5
 V?WDRKjW9a<Q<:A3c]Y:Dz3
@@ -207,8 +207,8 @@ R9
 R10
 !i10b 1
 R11
-Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd|
-Z39 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/bitwiseOR.vhd|
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseOR.vhd|
+Z37 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/bitwiseOR.vhd|
 !i113 1
 R14
 R15
@@ -228,8 +228,8 @@ R9
 R10
 !i10b 1
 R11
-R38
-R39
+R36
+R37
 !i113 1
 R14
 R15
@@ -238,21 +238,21 @@ R2
 R3
 R5
 R6
-w1553725470
+w1554684851
 R0
-8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd
-FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd
+8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/components.vhd
+FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/components.vhd
 l0
 L5
-VWZWI43NEN:jMD1<]2DlEO1
-!s100 g`DN^EchdKW[_43[>0[Y@1
+VkNYo7=g:jg<Fdlm7WPLQ23
+!s100 Jl@zJ4IN7Z;9MVj6k6zYc0
 R9
 31
-R19
+Z38 !s110 1554684966
 !i10b 1
-R20
-!s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd|
-!s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/components.vhd|
+Z39 !s108 1554684966.000000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/components.vhd|
+!s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/components.vhd|
 !i113 1
 R14
 R15
@@ -264,19 +264,19 @@ R4
 R5
 R6
 R0
-Z41 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd
-Z42 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd
+Z41 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/data_memory.vhd
+Z42 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/data_memory.vhd
 l0
 L6
 Vb^UNfSiUV39;<n_75e7fI3
 !s100 ]:6Z5OUo9e4Rijehb6@dj2
 R9
 31
-R26
+R10
 !i10b 1
-R27
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd|
-Z44 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/data_memory.vhd|
+R11
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/data_memory.vhd|
+Z44 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/data_memory.vhd|
 !i113 1
 R14
 R15
@@ -293,9 +293,9 @@ V_mbmESlnhGSUSX@DoKfNf3
 !s100 dJe]@VLFeY^k5]Jc[4ei>1
 R9
 31
-R26
+R10
 !i10b 1
-R27
+R11
 R43
 R44
 !i113 1
@@ -306,19 +306,19 @@ Z45 w1548007893
 R5
 R6
 R0
-Z46 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd
-Z47 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd
+Z46 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec2to4.vhd
+Z47 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec2to4.vhd
 l0
 L6
 V7obXTbi9S>EeXNbj1:@Bf2
 !s100 NbZK8dGF6nXNm>[=`JC>_0
 R9
 31
-Z48 !s110 1554236878
+R38
 !i10b 1
-Z49 !s108 1554236878.000000
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
-Z51 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec2to4.vhd|
+R39
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec2to4.vhd|
+Z49 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec2to4.vhd|
 !i113 1
 R14
 R15
@@ -332,11 +332,11 @@ VhN8DPKlKgnC?VE[1n^h@G0
 !s100 LmmfXEm2d@d@EW5E?AC=j3
 R9
 31
-R48
+R38
 !i10b 1
+R39
+R48
 R49
-R50
-R51
 !i113 1
 R14
 R15
@@ -348,8 +348,8 @@ R4
 R5
 R6
 R0
-Z52 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
-Z53 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd
+Z50 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec4to16.vhd
+Z51 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec4to16.vhd
 l0
 L7
 V0YDY9ROXNa`nXSJLmbm1m0
@@ -359,8 +359,8 @@ R9
 R10
 !i10b 1
 R11
-Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
-Z55 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/dec4to16.vhd|
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec4to16.vhd|
+Z53 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/dec4to16.vhd|
 !i113 1
 R14
 R15
@@ -380,29 +380,74 @@ R9
 R10
 !i10b 1
 R11
-R54
-R55
+R52
+R53
+!i113 1
+R14
+R15
+Eforwardingunit
+Z54 w1554682466
+R2
+R3
+R4
+R5
+R6
+R0
+Z55 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/forwardingUnit.vhd
+Z56 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/forwardingUnit.vhd
+l0
+L5
+VC?LZMzX<75LG6TLGS?34z2
+!s100 RXoK;i7<n;zHb1kE`QeG02
+R9
+31
+R10
+!i10b 1
+R11
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/forwardingUnit.vhd|
+Z58 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/forwardingUnit.vhd|
+!i113 1
+R14
+R15
+Aforward
+R2
+R3
+R4
+R5
+R6
+DEx4 work 14 forwardingunit 0 22 C?LZMzX<75LG6TLGS?34z2
+l12
+L11
+V`MimPGg=Tk@OTFF[M7`hY0
+!s100 He_FnY=fZhKjWz8CB639Z1
+R9
+31
+!s110 1554684969
+!i10b 1
+R11
+R57
+R58
 !i113 1
 R14
 R15
 Efulladd
-Z56 w1548795820
+Z59 w1548795820
 R5
 R6
 R0
-Z57 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
-Z58 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd
+Z60 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/fulladd.vhd
+Z61 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/fulladd.vhd
 l0
 L6
 VziY8cfTYCVz8^A`EWKZ2^1
 !s100 cXj=L=BeW98zYAJRLH9@j1
 R9
 31
-R48
+R38
 !i10b 1
-R49
-Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
-Z60 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/fulladd.vhd|
+R39
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/fulladd.vhd|
+Z63 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/fulladd.vhd|
 !i113 1
 R14
 R15
@@ -416,35 +461,35 @@ V;4A99eQYCR7B]KEjGZg0E2
 !s100 3Td1GOE:Li?fBdDZM`>ez2
 R9
 31
-R48
+R38
 !i10b 1
-R49
-R59
-R60
+R39
+R62
+R63
 !i113 1
 R14
 R15
 Einstruction_decode
-Z61 w1551822166
+Z64 w1551822166
 R2
 R3
 R4
 R5
 R6
 R0
-Z62 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
-Z63 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd
+Z65 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_decode.vhd
+Z66 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_decode.vhd
 l0
 L6
 VI5S8=f=@<;onK3agJ^o_61
 !s100 HhGi25M]mPDO<oUU9igcY1
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
-Z65 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_decode.vhd|
+R20
+Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_decode.vhd|
+Z68 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_decode.vhd|
 !i113 1
 R14
 R15
@@ -461,36 +506,36 @@ VZ5JXJfM::Pl[NB6WMgoTP0
 !s100 R@NXQ[ERGfkX^SdI08YMZ3
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R64
-R65
+R20
+R67
+R68
 !i113 1
 R14
 R15
 Einstruction_memory
-Z66 w1554096117
+Z69 w1554681623
 R2
 R3
 R4
-Z67 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z70 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R5
 R6
 R0
-Z68 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
-Z69 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd
+Z71 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_memory.vhd
+Z72 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_memory.vhd
 l0
 L8
 V<LM=NWoj7SeK`WOZ:ge102
 !s100 FUE5I95cMAaTeae4:ielR2
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
-Z71 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/instruction_memory.vhd|
+R20
+Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_memory.vhd|
+Z74 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/instruction_memory.vhd|
 !i113 1
 R14
 R15
@@ -498,42 +543,42 @@ Astruc_behaviour
 R2
 R3
 R4
-R67
+R70
 R5
 R6
 DEx4 work 18 instruction_memory 0 22 <LM=NWoj7SeK`WOZ:ge102
 l40
 L14
-V8CTzDIMQCUTRYIKZ?3N6Q2
-!s100 WgNfmR5T2hjQXP_l2T8R]1
+VOB8UCPnS_XIif96QLPD6o2
+!s100 mZ4GXlH4O?:B0DO<fPG>n1
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R70
-R71
+R20
+R73
+R74
 !i113 1
 R14
 R15
 Emux2to1
-Z72 w1548007894
+Z75 w1548007894
 R5
 R6
 R0
-Z73 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
-Z74 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd
+Z76 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux2to1.vhd
+Z77 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux2to1.vhd
 l0
 L6
 V]F]hTDio`OR<=VY3ZSjfn2
 !s100 2Y]BJOJ>nfG@D@kF6<KcB0
 R9
 31
-R48
+R38
 !i10b 1
-R49
-Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
-Z76 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux2to1.vhd|
+R39
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux2to1.vhd|
+Z79 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux2to1.vhd|
 !i113 1
 R14
 R15
@@ -547,24 +592,24 @@ Vm2f86Nge<14h;NWU_K>[>1
 !s100 ;W^SCehM[9I;kQINc0CEK0
 R9
 31
-R48
+R38
 !i10b 1
-R49
-R75
-R76
+R39
+R78
+R79
 !i113 1
 R14
 R15
 Emux4to1
-R72
+R75
 R2
 R3
 R4
 R5
 R6
 R0
-Z77 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
-Z78 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd
+Z80 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux4to1.vhd
+Z81 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux4to1.vhd
 l0
 L6
 V81WhnCONI:cWkiKH_1fkR1
@@ -574,8 +619,8 @@ R9
 R19
 !i10b 1
 R20
-Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
-Z80 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/mux4to1.vhd|
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux4to1.vhd|
+Z83 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/mux4to1.vhd|
 !i113 1
 R14
 R15
@@ -595,29 +640,29 @@ R9
 R19
 !i10b 1
 R20
-R79
-R80
+R82
+R83
 !i113 1
 R14
 R15
 Ereg1
-Z81 w1553724751
+Z84 w1553724751
 R5
 R6
 R0
-Z82 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
-Z83 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd
+Z85 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/reg1.vhd
+Z86 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/reg1.vhd
 l0
 L4
 VTNFC6:B[H4CSBC@Bf`ij[1
 !s100 <T[OREDgJB`k>b@b3kYdV2
 R9
 31
-R19
+R38
 !i10b 1
-R20
-Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
-Z85 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/reg1.vhd|
+R39
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/reg1.vhd|
+Z88 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/reg1.vhd|
 !i113 1
 R14
 R15
@@ -631,24 +676,24 @@ VdecXn_G_D_CVzQNWHn<>^0
 !s100 <@=57g91Bk@WdL@:D=of<2
 R9
 31
-R19
+R38
 !i10b 1
-R20
-R84
-R85
+R39
+R87
+R88
 !i113 1
 R14
 R15
 Eregister_file
-Z86 w1554096119
+Z89 w1554681617
 R2
 R3
 R4
 R5
 R6
 R0
-Z87 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
-Z88 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd
+Z90 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/register_file.vhd
+Z91 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/register_file.vhd
 l0
 L6
 Ve7HQgG3ff8;CjnQSG<FQb1
@@ -658,8 +703,8 @@ R9
 R19
 !i10b 1
 R20
-Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
-Z90 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/register_file.vhd|
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/register_file.vhd|
+Z93 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/register_file.vhd|
 !i113 1
 R14
 R15
@@ -672,36 +717,36 @@ R6
 DEx4 work 13 register_file 0 22 e7HQgG3ff8;CjnQSG<FQb1
 l41
 L12
-VJL6E;l9o7nnmQUE>UAi=j1
-!s100 eYBzn=zeJgK;ZDKm`H>L53
+V3VHA@@ClPSVPc2Vmoe^Fg2
+!s100 <hbH1N2[aG<m8hf53cgjb3
 R9
 31
 R19
 !i10b 1
 R20
-R89
-R90
+R92
+R93
 !i113 1
 R14
 R15
 Eregn
-R72
+R75
 R5
 R6
 R0
-Z91 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
-Z92 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd
+Z94 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/regN.vhd
+Z95 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/regN.vhd
 l0
 L5
 V<n2ab<HDD_k2>QBCPM]9>3
 !s100 9WISHEa<GU>hb:hkoFU>l1
 R9
 31
-R48
+R38
 !i10b 1
-R49
-Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
-Z94 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/regN.vhd|
+Z96 !s108 1554684965.000000
+Z97 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/regN.vhd|
+Z98 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/regN.vhd|
 !i113 1
 R14
 R15
@@ -715,24 +760,24 @@ V6fP>odf>[FfYhH6bzlTP=2
 !s100 H_Fd<a^^4ZRKjV6>Zi4<R0
 R9
 31
-R48
+R38
 !i10b 1
-R49
-R93
-R94
+R96
+R97
+R98
 !i113 1
 R14
 R15
 Eripple_carry
-Z95 w1549402782
+Z99 w1549402782
 R2
 R3
 R4
 R5
 R6
 R0
-Z96 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
-Z97 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd
+Z100 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/ripple_carry.vhd
+Z101 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/ripple_carry.vhd
 l0
 L8
 Vc:T[_OcQda0N;EmHS<fze2
@@ -742,8 +787,8 @@ R9
 R19
 !i10b 1
 R20
-Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
-Z99 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/ripple_carry.vhd|
+Z102 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/ripple_carry.vhd|
+Z103 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/ripple_carry.vhd|
 !i113 1
 R14
 R15
@@ -763,29 +808,29 @@ R9
 R19
 !i10b 1
 R20
-R98
-R99
+R102
+R103
 !i113 1
 R14
 R15
 Etrin
-R72
+R75
 R5
 R6
 R0
-Z100 8C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
-Z101 FC:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd
+Z104 8C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/trin.vhd
+Z105 FC:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/trin.vhd
 l0
 L6
 V3^=UTL66lAo[Zc29Y`UBR1
 !s100 09[YhPg2Q7CoUYLlSBnMB2
 R9
 31
-Z102 !s110 1554236877
+Z106 !s110 1554684965
 !i10b 1
-Z103 !s108 1554236877.000000
-Z104 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
-Z105 !s107 C:/Users/jeffd/OneDrive/Desktop/Spring19/ECE374/Lab6_7/trin.vhd|
+Z107 !s108 1554684964.000000
+Z108 !s90 -reportprogress|300|-93|-work|work|C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/trin.vhd|
+Z109 !s107 C:/Users/jeffd/OneDrive/Documents/GitHub/ECE374/trin.vhd|
 !i113 1
 R14
 R15
@@ -799,11 +844,11 @@ VUNPXCA:^CdmT0L>^RH;nj2
 !s100 KkF5k=d^9m5`cKFZjo2Pg0
 R9
 31
-R102
+R106
 !i10b 1
-R103
-R104
-R105
+R107
+R108
+R109
 !i113 1
 R14
 R15
