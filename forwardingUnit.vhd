@@ -11,25 +11,18 @@ end forwardingUnit;
 architecture forward of forwardingUnit is
 begin
 ---MEM_WB Forwarding-------
-	FORWARDING_A <="01" when 	((MEM_WB_REGWRITE = '1')and (not (MEM_WB_RD = "0000")) and 
-									not((EX_MEM_REGWRITE = '1') and (not (EX_MEM_RD = "0000")) 
-									and (not (EX_MEM_RD = ID_EX_RS))) 
+	FORWARDING_A <="01" when ((MEM_WB_REGWRITE = '1') 
 									and (MEM_WB_RD = ID_EX_RS)) else
 				-----EX_MEM Forwarding ------
 				"10" when		((EX_MEM_REGWRITE = '1')
-									and not (EX_MEM_RD = "0000")
 									and (EX_MEM_RD = ID_EX_RS)) 
 				----- No forwarding -----
 				else 	"00";
 	---MEM_WB Forwarding-------
-	FORWARDING_B <="01" when 	((MEM_WB_REGWRITE = '1') and 
-									(not (MEM_WB_RD = "0000"))and 
-									not((EX_MEM_REGWRITE = '1') and (not (EX_MEM_RD = "0000")) 
-									and (not (EX_MEM_RD = ID_EX_RT))) 
+	FORWARDING_B <="01" when 	((MEM_WB_REGWRITE = '1')
 									and (MEM_WB_RD = ID_EX_RT)) else
 					-----EX_MEM Forwarding ------
 				"10" when 		((EX_MEM_REGWRITE = '1')
-									and not (EX_MEM_RD = "0000")
 									and (EX_MEM_RD = ID_EX_RT))
 				----- No forwarding ---
 				else "00";
