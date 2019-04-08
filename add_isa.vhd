@@ -60,9 +60,7 @@ architecture behaviour of add_isa is
 	signal EX_MEM_SUM, EX_MEM_SRC2, EX_MEM_ADDPC:  		std_logic_vector(3 downto 0);
 	signal EX_MEM_MEMADDRESSOFFSET : 		std_logic_vector(3 downto 0);
 	--MEM_WB stage signals
-	signal MEM_WB_VALUE1, MEM_WB_SUM: 		std_logic_vector(3 downto 0);
-	signal  MEM_WB_RD :  std_logic_vector(3 downto 0) := "0000";
-	
+	signal MEM_WB_VALUE1, MEM_WB_SUM, MEM_WB_RD: 		std_logic_vector(3 downto 0);
 	----------------------------------------------------------------
 	-----------------     32-bit signals     -----------------------
 	----------------------------------------------------------------
