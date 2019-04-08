@@ -127,8 +127,8 @@ begin
 	-----------------------------------------------------------------
 	
 	------------- ALU -----------------------------------------------
-	aforwardingmux : mux4to1 generic map (n=>4) port map ( ID_EX_SRC1, writemux, EX_MEM_SUM, EX_MEM_SUM, FORWARDING_A, forwardingmuxtoalu );
-	bforwardingmux : mux4to1 generic map (n=>4) port map ( ID_EX_SRC2, writemux, EX_MEM_SUM, EX_MEM_SUM, FORWARDING_B, forwardingmuxtomux );
+	aforwardingmux1 : mux4to1 generic map (n=>4) port map ( ID_EX_SRC1, writemux, EX_MEM_SUM, EX_MEM_SUM, FORWARDING_A, forwardingmuxtoalu );
+	bforwardingmux1 : mux4to1 generic map (n=>4) port map ( ID_EX_SRC2, writemux, EX_MEM_SUM, EX_MEM_SUM, FORWARDING_B, forwardingmuxtomux );
 	rtrdmux1 :     mux2to1 generic map (n=>4) port map ( ID_EX_REGDST, ID_EX_RT, ID_EX_RD, rt_rd );
 	alusrcmux1 : 	mux2to1 generic map (n=>4) port map ( ID_EX_ALUSRC, forwardingmuxtomux, ID_EX_MEMADDRESSOFFSET, muxtoalu ); 
 	alu1 : 			alu port map ( forwardingmuxtoalu, muxtoalu, ID_EX_ADDSUB, ID_EX_ALUOP, sum, ZERO2 );
