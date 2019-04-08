@@ -18,7 +18,7 @@ architecture behaviour of add_isa is
 	signal MemRead, MemWrite, RegWrite, add_sub, ALUSRC, MemtoReg, RegDst, Branch, Jump, BRANCH_CONTROL, ZERO2 : std_logic;
 	
 	----- pipeline signals -----
-	signal ID_EX_ALUSRC, ID_EX_ADDSUB, ID_EX_MEMWRITE, ID_EX_REGWRITE, ID_EX_MEMTOREG, ID_EX_BRANCH, ID_EX_MEMREAD, EX_MEM_REGWRITE, EX_MEM_MEMTOREG, EX_MEM_ZERO2, EX_MEM_MEMWRITE, EX_MEM_MEMREAD, EX_MEM_BRANCH, MEM_WB_REGWRITE, MEM_WB_MEMTOREG : std_logic;
+	signal ID_EX_REGDST, ID_EX_ALUSRC, ID_EX_ADDSUB, ID_EX_MEMWRITE, ID_EX_REGWRITE, ID_EX_MEMTOREG, ID_EX_BRANCH, ID_EX_MEMREAD, EX_MEM_REGWRITE, EX_MEM_MEMTOREG, EX_MEM_ZERO2, EX_MEM_MEMWRITE, EX_MEM_MEMREAD, EX_MEM_BRANCH, MEM_WB_REGWRITE, MEM_WB_MEMTOREG : std_logic;
 	
 	----------------------------------------------------------------
 	-----------------     2-bit signals     ------------------------
@@ -26,6 +26,7 @@ architecture behaviour of add_isa is
 	
 	----- control signals / intra-stage signals -----
 	signal ALUOP : std_logic_vector(1 downto 0);
+	signal FORWARDING_A, FORWARDING_B : std_logic_vector(1 downto 0);
 	
 	----- pipeline signals -----
 	signal ID_EX_ALUOP : std_logic_vector(1 downto 0);
@@ -54,13 +55,12 @@ architecture behaviour of add_isa is
 	-----ID_EX stage signals --------
 	signal ID_EX_ADDPC, ID_EX_SRC1, ID_EX_SRC2: 			std_logic_vector(3 downto 0); 
 	signal ID_EX_MEMADDRESSOFFSET, ID_EX_RD,EX_MEM_RD: std_logic_vector(3 downto 0);
-	signal ID_EX_RT, ID_EX_RS, ID_EX_REGDST:           std_logic_vector(3 downto 0);
+	signal ID_EX_RT, ID_EX_RS:                         std_logic_vector(3 downto 0);
 	--EX_MEM stage signals ----
 	signal EX_MEM_SUM, EX_MEM_SRC2, EX_MEM_ADDPC:  		std_logic_vector(3 downto 0);
-	signal EX_MEM_MEMADDRESSOFFSET, EX_MEM_RTRD : 		std_logic_vector(3 downto 0);
+	signal EX_MEM_MEMADDRESSOFFSET : 		std_logic_vector(3 downto 0);
 	--MEM_WB stage signals
 	signal MEM_WB_VALUE1, MEM_WB_SUM, MEM_WB_RD : 		std_logic_vector(3 downto 0);
-	signal MEM_WB_RTRD :                               std_logic_vector(3 downto 0);
 	
 	----------------------------------------------------------------
 	-----------------     32-bit signals     -----------------------
@@ -104,7 +104,7 @@ begin
 	
 	
 	------------- ID_EX_PIPELINE ------------------------------------
-	ID_EX_REGDST :       reg1 port map ( clock, reset, RegDst, ID_EX_REGDST );
+	ID_EX_REGDST37 :     reg1 port map ( clock, reset, RegDst, ID_EX_REGDST );
 	ID_EX_ALUSRC7 : 		reg1 port map ( clock, reset, ALUSRC, ID_EX_ALUSRC );
 	ID_EX_ADDSUB10 : 		reg1 port map ( clock, reset, add_sub, ID_EX_ADDSUB );
 	ID_EX_MEMWRITE11 : 	reg1 port map ( clock, reset, MemWrite, ID_EX_MEMWRITE );
@@ -126,8 +126,8 @@ begin
 	-----------------------------------------------------------------
 	
 	------------- ALU -----------------------------------------------
-	aforwardingmux : mux4to1 generic map (n=>4) port map ( FORWARDING_A, ID_EX_SRC1, writemux, EX_MEM_SUM, '-', forwardingmuxtoalu );
-	bforwardingmux : mux4to1 generic map (n=>4) port map ( FORWARDING_B, ID_EX_SRC2, writemux, EX_MEM_SUM, '-', forwardingmuxtomux );
+	aforwardingmux : mux4to1 generic map (n=>4) port map ( ID_EX_SRC1, writemux, EX_MEM_SUM, EX_MEM_SUM, FORWARDING_A, forwardingmuxtoalu );
+	bforwardingmux : mux4to1 generic map (n=>4) port map ( ID_EX_SRC2, writemux, EX_MEM_SUM, EX_MEM_SUM, FORWARDING_B, forwardingmuxtomux );
 	rtrdmux1 :     mux2to1 generic map (n=>4) port map ( ID_EX_REGDST, ID_EX_RT, ID_EX_RD, rt_rd );
 	alusrcmux1 : 	mux2to1 generic map (n=>4) port map ( ID_EX_ALUSRC, forwardingmuxtomux, ID_EX_MEMADDRESSOFFSET, muxtoalu ); 
 	alu1 : 			alu port map ( forwardingmuxtoalu, muxtoalu, ID_EX_ADDSUB, ID_EX_ALUOP, sum, ZERO2 );
@@ -142,10 +142,10 @@ begin
 	EX_MEM_BRANCH24 : 	reg1 port map ( clock, reset, ID_EX_BRANCH, EX_MEM_BRANCH );
 	EX_MEM_ADDPC25 : 		regN generic map (n=>4) port map ( clock, ID_EX_ADDPC, EX_MEM_ADDPC );
 	EX_MEM_MEMADDROFF26 :regN generic map (n=>4) port map ( clock, ID_EX_MEMADDRESSOFFSET, EX_MEM_MEMADDRESSOFFSET );
-	EX_MEM_RD18 : 			regN generic map (n=>4) port map ( clock, ID_EX_RD, EX_MEM_RD );
+	EX_MEM_RD18 : 			regN generic map (n=>4) port map ( clock, rt_rd, EX_MEM_RD );
 	EX_MEM_SUM19 : 		regN generic map (n=>4) port map ( clock, sum, EX_MEM_SUM );
 	EX_MEM_SRC223 : 		regN generic map (n=>4) port map ( clock, forwardingmuxtomux, EX_MEM_SRC2 );
-	EX_MEM_RTRD35 :        regN generic map (n=>4) port map ( clock, rt_rd, EX_MEM_RTRD );
+	
 	-----------------------------------------------------------------
 	-----------------        MEM STAGE        -----------------------
 	-----------------------------------------------------------------
@@ -163,13 +163,19 @@ begin
 	MEM_WB_VALUE129 : 	regN generic map (n=>4) port map ( clock, value1, MEM_WB_VALUE1 );
 	MEM_WB_SUM30 : 		regN generic map (n=>4) port map ( clock, EX_MEM_SUM, MEM_WB_SUM );
 	MEM_WB_RD31 :			regN generic map (n=>4) port map ( clock, EX_MEM_RD, MEM_WB_RD );
-	MEM_WB_RTRD36 :      regN generic map (n=>4) port map ( clock, EX_MEM_RTRD, MEM_WB_RTRD );
+	
 	-----------------------------------------------------------------
 	-----------------        WB STAGE        ------------------------
 	-----------------------------------------------------------------	
 	
    dmmux1 : mux2to1 generic map (n=>4) port map ( MEM_WB_MEMTOREG, MEM_WB_SUM, MEM_WB_VALUE1, writemux );
    
+	
+	-----------------------------------------------------------------
+	-----------------     FORWARDING UNIT    ------------------------
+	-----------------------------------------------------------------
+	
+	forwardingunit1 : forwardingUnit port map ( MEM_WB_REGWRITE, EX_MEM_REGWRITE, MEM_WB_RD, EX_MEM_RD, ID_EX_RS, ID_EX_RT, FORWARDING_A, FORWARDING_B );
 	
 	
 	
