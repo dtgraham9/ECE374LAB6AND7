@@ -134,7 +134,7 @@ end component;
 -------------   forwarding unit -----------------------------
 component forwardingUnit is 
 	port(MEM_WB_REGWRITE, EX_MEM_REGWRITE : 	in std_logic;
-	MEM_WB_RD, EX_MEM_RD, ID_EX_RD, ID_EX_RT: in std_logic_vector(4 downto 0);
+	MEM_WB_RD, EX_MEM_RD, ID_EX_Rs, ID_EX_RT: in std_logic_vector(3 downto 0);
 	FORWARDING_A, FORWARDING_B : 					out std_logic_vector(1 downto 0));
 end component;
 
