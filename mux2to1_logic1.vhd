@@ -11,13 +11,6 @@ END mux2to1_logic1;
 
 ARCHITECTURE LogicFunc OF mux2to1_logic1 IS
 BEGIN
-	process(s)
-		begin
-			if (s='0') then
-				f <= a;
-			else
-				f <= b;
-			end if;
-	end process;
+	f <= a when(s='0') else b;
 			
 END LogicFunc;
