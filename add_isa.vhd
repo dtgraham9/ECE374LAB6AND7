@@ -30,6 +30,17 @@ architecture behaviour of add_isa is
 	signal EX_MEM_BRANCH : 										std_logic;
 	signal MEM_WB_REGWRITE, MEM_WB_MEMTOREG : 			std_logic;
 	
+	---------------Hazard signals----------------------------------
+	signal hazard:													std_logic;
+	signal hazard_memwrite:										std_logic;
+	signal hazard_regwrite:										std_logic;
+	signal hazard_memtoReg:										std_logic;
+	signal hazard_memwrite										std_logic;
+	signal hazard_branch											std_logic;
+	
+	signal hazard_PC:												std_logic_vector(3 downto 0);
+	signal hazard_update_pc:									std_logic_vector(3 downto 0);
+	signal hazard_instr_im										std_logic_vector(31 downto 0);
 	----------------------------------------------------------------
 	-----------------     2-bit signals     ------------------------
 	----------------------------------------------------------------	
@@ -77,7 +88,7 @@ architecture behaviour of add_isa is
 	signal instr_from_im : 										std_logic_vector(31 downto 0);
 	
 	----- pipeline signals = -----
-	signal IF_ID_INSTR : 										std_logic_vector(31 downto 0);
+	signal IF_ID_INSTR : 										std_logic_vector(31 downto 0)
 	
 begin
 
@@ -86,7 +97,8 @@ begin
 	----------------------------------------------------------------
 	
 	pc_mux1 : 	mux2to1 generic map (n=>4) port map (reset, final_pc, initial_pc, mout);					--- multiplexer
-	pc1	: 		regN generic map (n=>4) port map (clock, mout, rout);												--- register
+	pc_hazard_mux : mux2t01 generic map (n=>4) port map(hazard, mout,rout,hazard_pc); 
+	pc1	: 		regN generic map (n=>4) port map (clock, hazard_pc, rout);												--- register
 	---------- pc = pc +1 ------------------------------------------
 	addpc1 : 	ripple_carry port map ('0', rout, "0001", update_pc);
 	
@@ -95,12 +107,20 @@ begin
 	im1 : instruction_memory port map (clock, reset, rout, instr_from_im);
 	
 	---------- IF_ID_PIPELINE ---------------------------------------
-	IF_ID_ADDPC2 : regN generic map (n=>4) port map ( clock, update_pc, IF_ID_ADDPC );
-	IF_ID_INSTR1 : regN generic map (n=>32) port map ( clock, instr_from_im, IF_ID_INSTR ); 
+	-----------Hazard-------------------------------------------------
+	Hazard_addPC1 : mux2to1 generic map (n=>4) port map (hazard, update_pc, IF_ID_ADDPC, hazard_update_pc);
+	hazard_instr1 : mux2to1 generic map (n=>32) port map(hazard, instr_from_im, IF_ID_INSTR, hazard_instr_im);
+	------------hazard end-----------------------------------------------------------
+	IF_ID_ADDPC2 : regN generic map (n=>4) port map ( clock, hazard_update_pc, IF_ID_ADDPC );
+	IF_ID_INSTR1 : regN generic map (n=>32) port map ( clock, hazard_instr_im, IF_ID_INSTR ); 
 	
 	-----------------------------------------------------------------
 	------------------        ID STAGE        -----------------------
 	-----------------------------------------------------------------
+	
+	---------------Hazard detection unit ------------------------------
+	Hazard_detection_unit : hazard_detection port map(ID_EX_RD, ID_RS, ID_RT, ID_EX_MEMREAD,
+																		ID_EX_Regwrite, hazard);
 	
 	------------- ID ------------------------------------------------
 	id1 : instruction_decode port map (IF_ID_INSTR, MemRead, MemWrite, RegWrite, add_sub, read_port1, read_port2, 
@@ -112,13 +132,21 @@ begin
 	
 	
 	------------- ID_EX_PIPELINE ------------------------------------
+	-----------Hazard muxes ----------------------------------------
+	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard, memwrite, '0', hazard_memwrite);
+	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard, regwrite, '0', hazard_regwrite);
+	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   '0', hazard_branch);
+	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, '0', hazard_memtoReg);
+ 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  '0', hazard_memRead);
+	-----------------hazard end--------------------------------------------------------
+	
 	ID_EX_ALUSRC7 : 		reg1 port map ( clock, reset, ALUSRC, ID_EX_ALUSRC );
 	ID_EX_ADDSUB10 : 		reg1 port map ( clock, reset, add_sub, ID_EX_ADDSUB );
-	ID_EX_MEMWRITE11 : 	reg1 port map ( clock, reset, MemWrite, ID_EX_MEMWRITE );
-	ID_EX_REGWRITE12 : 	reg1 port map ( clock, reset, RegWrite, ID_EX_REGWRITE );
-	ID_EX_MEMTOREG13 : 	reg1 port map ( clock, reset, MemtoReg, ID_EX_MEMTOREG );
-	ID_EX_BRANCH14 : 		reg1 port map ( clock, reset, Branch, ID_EX_BRANCH);
-	ID_EX_MEMREAD15 : 	reg1 port map ( clock, reset, MemRead, ID_EX_MEMREAD);
+	ID_EX_MEMWRITE11 : 	reg1 port map ( clock, reset, hazard_memwrite, ID_EX_MEMWRITE );
+	ID_EX_REGWRITE12 : 	reg1 port map ( clock, reset, hazard_regwrite, ID_EX_REGWRITE );
+	ID_EX_MEMTOREG13 : 	reg1 port map ( clock, reset, hazard_MEMtoREG, ID_EX_MEMTOREG );
+	ID_EX_BRANCH14 : 		reg1 port map ( clock, reset, hazard_branch, ID_EX_BRANCH);
+	ID_EX_MEMREAD15 : 	reg1 port map ( clock, reset, hazard_memRead, ID_EX_MEMREAD);
 	ID_EX_ALUOP8 : 		regN generic map (n=>2) port map ( clock, ALUOP, ID_EX_ALUOP );
 	ID_EX_ADDPC3 : 		regN generic map (n=>4) port map ( clock, IF_ID_ADDPC, ID_EX_ADDPC );
 	ID_EX_SRC14 : 			regN generic map (n=>4) port map ( clock, src1, ID_EX_SRC1 );
