@@ -14,6 +14,7 @@ architecture behaviour of add_isa is
 	----------------------------------------------------------------
 	
 	----- control signals / intra-stage signals -----
+	constant zero_value : std_logic :='0';
 	constant initial_pc : std_logic_vector(3 downto 0) := (others => '0');
 	signal MemRead, MemWrite, RegWrite, add_sub, ALUSRC, MemtoReg, RegDst, Branch, Jump, BRANCH_CONTROL, ZERO2 : std_logic;
 	
@@ -124,11 +125,11 @@ begin
 	
 	------------- ID_EX_PIPELINE ------------------------------------
 	-----------Hazard muxes ----------------------------------------
-	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard, memwrite, '0', hazard_memwrite);
-	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard, regwrite, '0', hazard_regwrite);
-	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   '0', hazard_branch);
-	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, '0', hazard_memtoReg);
- 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  '0', hazard_memRead);
+	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard, memwrite, zero_value, hazard_memwrite);
+	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard, regwrite, zero_value, hazard_regwrite);
+	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   zero_value, hazard_branch);
+	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, zero_value, hazard_memtoReg);
+ 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  zero_value, hazard_memRead);
 	-----------------hazard end--------------------------------------------------------
 	
 	ID_EX_ALUSRC7 : 		reg1 port map ( clock, reset, ALUSRC, ID_EX_ALUSRC );

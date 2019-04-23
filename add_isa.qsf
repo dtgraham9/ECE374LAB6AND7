@@ -64,6 +64,7 @@ set_location_assignment PIN_E22 -to current_pc[1]
 set_location_assignment PIN_E25 -to current_pc[2]
 set_location_assignment PIN_E24 -to current_pc[3]
 set_location_assignment PIN_G19 -to result[0]
+set_global_assignment -name VHDL_FILE mux2to1_logic1.vhd
 set_global_assignment -name VHDL_FILE hazard_detection.vhd
 set_global_assignment -name VHDL_FILE forwardingUnit.vhd
 set_global_assignment -name VHDL_FILE alu.vhd
