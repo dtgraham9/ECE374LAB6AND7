@@ -14,8 +14,8 @@ architecture behaviour of hazard_detection is
 begin
 	hazard <='1' when (ID_EX_MemREAD = '1' AND
 							 ID_EX_Regwrite = '1' AND
-							 (ID_EX_RD == ID_RS) OR 
-							 (ID_EX_RD == ID_RT)) else	'0';
+							 ((ID_EX_RD = ID_RS) OR 
+							 (ID_EX_RD = ID_RT))) else	'0';
 
 
 end behaviour;

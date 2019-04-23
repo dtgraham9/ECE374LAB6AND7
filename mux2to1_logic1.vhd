@@ -7,7 +7,7 @@ ENTITY mux2to1_logic1 IS
 	PORT ( s : IN std_logic;
 			a, b : in std_logic;
 			f : OUT std_logic);
-END mux2to1;
+END mux2to1_logic1;
 
 ARCHITECTURE LogicFunc OF mux2to1_logic1 IS
 BEGIN

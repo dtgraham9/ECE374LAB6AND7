@@ -25,12 +25,12 @@ architecture behaviour of add_isa is
 	signal hazard_memwrite:										std_logic;
 	signal hazard_regwrite:										std_logic;
 	signal hazard_memtoReg:										std_logic;
-	signal hazard_memwrite										std_logic;
-	signal hazard_branch											std_logic;
+	signal hazard_memread:										std_logic;
+	signal hazard_branch:											std_logic;
 	
 	signal hazard_PC:												std_logic_vector(3 downto 0);
 	signal hazard_update_pc:									std_logic_vector(3 downto 0);
-	signal hazard_instr_im										std_logic_vector(31 downto 0);
+	signal hazard_instr_im:										std_logic_vector(31 downto 0);
 	----------------------------------------------------------------
 	-----------------     2-bit signals     ------------------------
 	----------------------------------------------------------------	
@@ -89,7 +89,7 @@ begin
 	----------------------------------------------------------------
 	
 	pc_mux1 : 	mux2to1 generic map (n=>4) port map (reset, final_pc, initial_pc, mout);					--- multiplexer
-	pc_hazard_mux : mux2t01 generic map (n=>4) port map(hazard, mout,rout,hazard_pc); 
+	pc_hazard_mux : mux2to1 generic map (n=>4) port map(hazard, mout,rout,hazard_pc); 
 	pc1	: 		regN generic map (n=>4) port map (clock, hazard_pc, rout);												--- register
 	---------- pc = pc +1 ------------------------------------------
 	addpc1 : ripple_carry port map ('0', rout, "0001", update_pc);
@@ -111,7 +111,7 @@ begin
 	-----------------------------------------------------------------
 	
 	---------------Hazard detection unit ------------------------------
-	Hazard_detection_unit : hazard_detection port map(ID_EX_RD, ID_RS, ID_RT, ID_EX_MEMREAD,
+	Hazard_detection_unit : hazard_detection port map(ID_EX_RD, read_port1, read_port2, ID_EX_MEMREAD,
 																		ID_EX_Regwrite, hazard);
 	
 	------------- ID ------------------------------------------------
