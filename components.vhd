@@ -138,4 +138,21 @@ component forwardingUnit is
 	FORWARDING_A, FORWARDING_B : 					out std_logic_vector(1 downto 0));
 end component;
 
+------------Hazard detection ------------------------------
+
+component hazard_Detection is
+	port(ID_EX_RD, ID_RS, ID_RT : in std_logic_vector(3 downto 0);
+			      ID_EX_MEMREAD : in std_logic;
+					ID_EX_Regwrite: in std_logic;
+			        hazard : out std_logic);
+end component;
+
+-----------2to1 mux for std_logic ----------------------
+
+component mux2to1_logic1 IS
+	PORT ( s : IN std_logic;
+			a, b : in std_logic;
+			f : OUT std_logic);
+END component;
+
 end components; 
