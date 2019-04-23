@@ -15,10 +15,14 @@ architecture behaviour of add_isa is
 	
 	----- control signals / intra-stage signals -----
 	constant initial_pc : std_logic_vector(3 downto 0) := (others => '0');
+	constant reset_Instr: std_logic_vector(31 downto 0) := (others=>'1');
 	signal MemRead, MemWrite, RegWrite, add_sub, ALUSRC, MemtoReg, RegDst, Branch, Jump, BRANCH_CONTROL, ZERO2 : std_logic;
 	
 	----- pipeline signals -----
 	signal ID_EX_REGDST, ID_EX_ALUSRC, ID_EX_ADDSUB, ID_EX_MEMWRITE, ID_EX_REGWRITE, ID_EX_MEMTOREG, ID_EX_BRANCH, ID_EX_MEMREAD, EX_MEM_REGWRITE, EX_MEM_MEMTOREG, EX_MEM_ZERO2, EX_MEM_MEMWRITE, EX_MEM_MEMREAD, EX_MEM_BRANCH, MEM_WB_REGWRITE, MEM_WB_MEMTOREG : std_logic;
+	
+	---------hazard and branch mux signal --------------------------\
+	signal hazard_branch_control :							std_logic;
 	
 	---------------Hazard signals----------------------------------
 	signal hazard:													std_logic;
@@ -26,11 +30,19 @@ architecture behaviour of add_isa is
 	signal hazard_regwrite:										std_logic;
 	signal hazard_memtoReg:										std_logic;
 	signal hazard_memread:										std_logic;
-	signal hazard_branch:											std_logic;
+	signal hazard_branch:										std_logic;
 	
 	signal hazard_PC:												std_logic_vector(3 downto 0);
 	signal hazard_update_pc:									std_logic_vector(3 downto 0);
 	signal hazard_instr_im:										std_logic_vector(31 downto 0);
+	
+	-----------branch signals-------------------------------------
+	signal branch_EX_MEM_REGwrite:							std_logic;
+	signal branch_EX_MEM_MEMTOREG:							std_logic;
+	signal branch_EX_MEM_MEMWRITE:							std_logic;
+	signal branch_EX_MEM_MEMREAD:								std_logic;
+	signal branch_ID_EX_branch:								std_logic;
+	
 	----------------------------------------------------------------
 	-----------------     2-bit signals     ------------------------
 	----------------------------------------------------------------	
@@ -79,6 +91,9 @@ architecture behaviour of add_isa is
 	----- control signals / intra-stage signals -----
 	signal instr_from_im : std_logic_vector(31 downto 0);
 	
+	---------branch------------------------------------
+	signal final_instr_im : 			std_logic_vector(31 downto 0);
+	
 	----- pipeline signals -----
 	signal IF_ID_INSTR : std_logic_vector(31 downto 0);
 	
@@ -103,8 +118,10 @@ begin
 	Hazard_addPC1 : mux2to1 generic map (n=>4) port map (hazard, update_pc, IF_ID_ADDPC, hazard_update_pc);
 	hazard_instr1 : mux2to1 generic map (n=>32) port map(hazard, instr_from_im, IF_ID_INSTR, hazard_instr_im);
 	------------hazard end-----------------------------------------------------------
+	--------------branch logic ------------------------------------------------------
+	branch_logic_instr: mux2to1 generic map(n=>32) port map(Branch_control, hazard_instr_im, reset_Instr, final_instr_im);
 	IF_ID_ADDPC2 : regN generic map (n=>4) port map ( clock, hazard_update_pc, IF_ID_ADDPC );
-	IF_ID_INSTR1 : regN generic map (n=>32) port map ( clock, hazard_instr_im, IF_ID_INSTR ); 
+	IF_ID_INSTR1 : regN generic map (n=>32) port map ( clock, final_instr_im, IF_ID_INSTR ); 
 	
 	-----------------------------------------------------------------
 	------------------        ID STAGE        -----------------------
@@ -122,13 +139,15 @@ begin
 	rf1 : register_file port map (clock, reset, MEM_WB_REGWRITE, read_port1, read_port2, MEM_WB_RD, writemux, src1, src2);
 	
 	
+	hazard_branch_control <= hazard OR branch_Control;
+	
 	------------- ID_EX_PIPELINE ------------------------------------
 	-----------Hazard muxes ----------------------------------------
-	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard, memwrite, '0', hazard_memwrite);
-	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard, regwrite, '0', hazard_regwrite);
-	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   '0', hazard_branch);
-	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, '0', hazard_memtoReg);
- 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  '0', hazard_memRead);
+	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard_branch_control, memwrite, '0', hazard_memwrite);
+	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard_branch_control, regwrite, '0', hazard_regwrite);
+	Hazard_Branch1   :		mux2to1_logic1 port map(hazard_branch_control, branch,   '0', hazard_branch);
+	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard_branch_control, memtoReg, '0', hazard_memtoReg);
+ 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard_branch_control, memread,  '0', hazard_memRead);
 	-----------------hazard end--------------------------------------------------------
 	
 	ID_EX_ALUSRC7 : 		reg1 port map ( clock, reset, ALUSRC, ID_EX_ALUSRC );
@@ -160,12 +179,20 @@ begin
 	
 	
 	------------- EX_MEM_PIPELINE -----------------------------------
-	EX_MEM_REGWRITE16 : 	reg1 port map ( clock, reset, ID_EX_REGWRITE, EX_MEM_REGWRITE );
-	EX_MEM_MEMTOREG17 : 	reg1 port map ( clock, reset, ID_EX_MEMTOREG, EX_MEM_MEMTOREG );
+	------------- branch control---------------------------------------
+	branch_regwrite1 : 	mux2to1_logic1 port map(branch_control, ID_EX_Regwrite, '0', branch_EX_MEM_REGwrite);
+	branch_memtoREg1 :	mux2to1_logic1 port map(branch_control, ID_EX_memtoreg, '0', branch_EX_MEM_MEMTOREG);
+	branch_memwrite1 :	mux2to1_logic1 port map(branch_control, ID_EX_MEMWRITE, '0', branch_EX_MEM_MEMWRITE);
+	branch_MEMREAD1  :	mux2to1_logic1 port map(branch_control, ID_EX_MEMREAD,  '0', branch_EX_MEM_MEMREAD);
+	branch_Branch1   :   mux2to1_logic1 port map(branch_control, ID_EX_Branch,   '0', branch_ID_EX_branch);
+	------------------branch end ------------------------------------------------
+	
+	EX_MEM_REGWRITE16 : 	reg1 port map ( clock, reset, branch_EX_MEM_REGwrite, EX_MEM_REGWRITE );
+	EX_MEM_MEMTOREG17 : 	reg1 port map ( clock, reset, branch_EX_MEM_MEMTOREG, EX_MEM_MEMTOREG );
 	EX_MEM_ZERO220 : 		reg1 port map ( clock, reset, ZERO2, EX_MEM_ZERO2 );
-	EX_MEM_MEMWRITE21 : 	reg1 port map ( clock, reset, ID_EX_MEMWRITE, EX_MEM_MEMWRITE );
-	EX_MEM_MEMREAD22 : 	reg1 port map ( clock, reset, ID_EX_MEMREAD, EX_MEM_MEMREAD );
-	EX_MEM_BRANCH24 : 	reg1 port map ( clock, reset, ID_EX_BRANCH, EX_MEM_BRANCH );
+	EX_MEM_MEMWRITE21 : 	reg1 port map ( clock, reset, branch_EX_MEM_MEMWRITE, EX_MEM_MEMWRITE );
+	EX_MEM_MEMREAD22 : 	reg1 port map ( clock, reset, branch_EX_MEM_MEMREAD, EX_MEM_MEMREAD );
+	EX_MEM_BRANCH24 : 	reg1 port map ( clock, reset, branch_ID_EX_branch, EX_MEM_BRANCH );
 	EX_MEM_ADDPC25 : 		regN generic map (n=>4) port map ( clock, ID_EX_ADDPC, EX_MEM_ADDPC );
 	EX_MEM_MEMADDROFF26 :regN generic map (n=>4) port map ( clock, ID_EX_MEMADDRESSOFFSET, EX_MEM_MEMADDRESSOFFSET );
 	EX_MEM_RD18 : 			regN generic map (n=>4) port map ( clock, rt_rd, EX_MEM_RD );
