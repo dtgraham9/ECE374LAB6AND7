@@ -13,21 +13,21 @@ architecture struc_behaviour of register_file is
 
 	constant zero_value : std_logic_vector(3 downto 0) := (others => '0');
 	constant reg0 : std_logic_vector(3 downto 0) := "0000";
-	constant reg1 : std_logic_vector(3 downto 0) := "0000";
-	constant reg2 : std_logic_vector(3 downto 0) := "0000";
-	constant reg3 : std_logic_vector(3 downto 0) := "0000";
-	constant reg4 : std_logic_vector(3 downto 0) := "0000";
-	constant reg5 : std_logic_vector(3 downto 0) := "0000";
-	constant reg6 : std_logic_vector(3 downto 0) := "0001";
-	constant reg7 : std_logic_vector(3 downto 0) := "0010";
-	constant reg8 : std_logic_vector(3 downto 0) := "0011";
-	constant reg9 : std_logic_vector(3 downto 0) := "0100";
-	constant reg10 : std_logic_vector(3 downto 0) := "0101";
-	constant reg11 : std_logic_vector(3 downto 0) := "0110";
-	constant reg12 : std_logic_vector(3 downto 0) := "0111";
-	constant reg13 : std_logic_vector(3 downto 0) := "1000";
-	constant reg14 : std_logic_vector(3 downto 0) := "0010";
-	constant reg15 : std_logic_vector(3 downto 0) := "0011";
+	constant reg1 : std_logic_vector(3 downto 0) := "0001";
+	constant reg2 : std_logic_vector(3 downto 0) := "0010";
+	constant reg3 : std_logic_vector(3 downto 0) := "0011";
+	constant reg4 : std_logic_vector(3 downto 0) := "0100";
+	constant reg5 : std_logic_vector(3 downto 0) := "0101";
+	constant reg6 : std_logic_vector(3 downto 0) := "0110";
+	constant reg7 : std_logic_vector(3 downto 0) := "0000";
+	constant reg8 : std_logic_vector(3 downto 0) := "0000";
+	constant reg9 : std_logic_vector(3 downto 0) := "0000";
+	constant reg10 : std_logic_vector(3 downto 0) := "0000";
+	constant reg11 : std_logic_vector(3 downto 0) := "0000";
+	constant reg12 : std_logic_vector(3 downto 0) := "0000";
+	constant reg13 : std_logic_vector(3 downto 0) := "0000";
+	constant reg14 : std_logic_vector(3 downto 0) := "0000";
+	constant reg15 : std_logic_vector(3 downto 0) := "0000";
 	
 	signal decoder_port1, decoder_port2, decoder_write_enable : std_logic_vector(15 downto 0);
 	
