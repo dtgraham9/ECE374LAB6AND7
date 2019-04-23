@@ -48,7 +48,7 @@ begin
 	read_p2 <= instr(19 downto 16);
 	write_p <= instr(14 downto 11);
 	
-	MemRead <= '0';
+	MemRead <= '1' when (opcode="100011") else '0';
 	
 	MemWrite <= '1' when (opcode = "101011") else
 	                       '0';
