@@ -136,11 +136,11 @@ begin
 	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   '0', hazard_branch);
 	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, '0', hazard_memtoReg);
  	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  '0', hazard_memRead);
-	HAZARD_SRC11     :      mux2to1 generic map (n=>4) port map (hazard, src1, "0000", HAZARD_SRC1);
-	HAZARD_SRC21     :      mux2to1 generic map (n=>4) port map (hazard, src2, "0000", HAZARD_SRC2);
-	HAZARD_MEMADDRESSOFFSET1:mux2to1 generic map (n=>4) port map (hazard, memaddressoffset, "0000", HAZARD_MEMADDRESSOFFSET);
-	HAZARD_RT1        :      mux2to1 generic map (n=>4) port map (hazard, read_port2, "0000", HAZARD_RT);
-	HAZARD_RS1        :      mux2to1 generic map (n=>4) port map (hazard, read_port1, "0000", HAZARD_RS);
+	HAZARD_SRC11     :      mux2to1 generic map (n=>4) port map (hazard, src1, "UUUU", HAZARD_SRC1);
+	HAZARD_SRC21     :      mux2to1 generic map (n=>4) port map (hazard, src2, "UUUU", HAZARD_SRC2);
+	HAZARD_MEMADDRESSOFFSET1:mux2to1 generic map (n=>4) port map (hazard, memaddressoffset, "UUUU", HAZARD_MEMADDRESSOFFSET);
+	HAZARD_RT1        :      mux2to1 generic map (n=>4) port map (hazard, read_port2, "UUUU", HAZARD_RT);
+	HAZARD_RS1        :      mux2to1 generic map (n=>4) port map (hazard, read_port1, "UUUU", HAZARD_RS);
 	-----------------hazard end--------------------------------------------------------
 	
 	ID_EX_ALUSRC7 : 		reg1 port map ( clock, reset, ALUSRC, ID_EX_ALUSRC );
