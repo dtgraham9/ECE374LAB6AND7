@@ -27,11 +27,17 @@ architecture behaviour of add_isa is
 	signal hazard_regwrite:										std_logic;
 	signal hazard_memtoReg:										std_logic;
 	signal hazard_memread:										std_logic;
-	signal hazard_branch:											std_logic;
+	signal hazard_branch:										std_logic;
 	
 	signal hazard_PC:												std_logic_vector(3 downto 0);
 	signal hazard_update_pc:									std_logic_vector(3 downto 0);
 	signal hazard_instr_im:										std_logic_vector(31 downto 0);
+	
+	signal HAZARD_SRC1:                                std_logic_vector(3 downto 0);
+	signal HAZARD_SRC2:                                std_logic_vector(3 downto 0);
+	signal HAZARD_MEMADDRESSOFFSET:                    std_logic_vector(3 downto 0);
+	signal HAZARD_RT:                                  std_logic_vector(3 downto 0);
+	signal HAZARD_RS:                                  std_logic_vector(3 downto 0);
 	----------------------------------------------------------------
 	-----------------     2-bit signals     ------------------------
 	----------------------------------------------------------------	
@@ -125,11 +131,16 @@ begin
 	
 	------------- ID_EX_PIPELINE ------------------------------------
 	-----------Hazard muxes ----------------------------------------
-	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard, memwrite, zero_value, hazard_memwrite);
-	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard, regwrite, zero_value, hazard_regwrite);
-	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   zero_value, hazard_branch);
-	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, zero_value, hazard_memtoReg);
- 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  zero_value, hazard_memRead);
+	Hazard_memwrite1 :		mux2to1_logic1 port map(hazard, memwrite, '0', hazard_memwrite);
+	Hazard_regwrite1 :		mux2to1_logic1 port map(hazard, regwrite, '0', hazard_regwrite);
+	Hazard_Branch1   :		mux2to1_logic1 port map(hazard, branch,   '0', hazard_branch);
+	Hazard_MEMtoReg1 :		mux2to1_logic1 port map(hazard, memtoReg, '0', hazard_memtoReg);
+ 	Hazard_MEMRead1  :		mux2to1_logic1 port map(hazard, memread,  '0', hazard_memRead);
+	HAZARD_SRC11     :      mux2to1 generic map (n=>4) port map (hazard, src1, "0000", HAZARD_SRC1);
+	HAZARD_SRC21     :      mux2to1 generic map (n=>4) port map (hazard, src2, "0000", HAZARD_SRC2);
+	HAZARD_MEMADDRESSOFFSET1:mux2to1 generic map (n=>4) port map (hazard, memaddressoffset, "0000", HAZARD_MEMADDRESSOFFSET);
+	HAZARD_RT1        :      mux2to1 generic map (n=>4) port map (hazard, read_port2, "0000", HAZARD_RT);
+	HAZARD_RS1        :      mux2to1 generic map (n=>4) port map (hazard, read_port1, "0000", HAZARD_RS);
 	-----------------hazard end--------------------------------------------------------
 	
 	ID_EX_ALUSRC7 : 		reg1 port map ( clock, reset, ALUSRC, ID_EX_ALUSRC );
@@ -141,12 +152,12 @@ begin
 	ID_EX_MEMREAD15 : 	reg1 port map ( clock, reset, hazard_memRead, ID_EX_MEMREAD);
 	ID_EX_ALUOP8 : 		regN generic map (n=>2) port map ( clock, ALUOP, ID_EX_ALUOP );
 	ID_EX_ADDPC3 : 		regN generic map (n=>4) port map ( clock, IF_ID_ADDPC, ID_EX_ADDPC );
-	ID_EX_SRC14 : 			regN generic map (n=>4) port map ( clock, src1, ID_EX_SRC1 );
-	ID_EX_SRC25 : 			regN generic map (n=>4) port map ( clock, src2, ID_EX_SRC2 );
-	ID_EX_MEMADDROFF6 : 	regN generic map (n=>4) port map ( clock, memaddressoffset, ID_EX_MEMADDRESSOFFSET );
+	ID_EX_SRC14 : 			regN generic map (n=>4) port map ( clock, HAZARD_SRC1, ID_EX_SRC1 );
+	ID_EX_SRC25 : 			regN generic map (n=>4) port map ( clock, HAZARD_SRC2, ID_EX_SRC2 );
+	ID_EX_MEMADDROFF6 : 	regN generic map (n=>4) port map ( clock, HAZARD_MEMADDRESSOFFSET, ID_EX_MEMADDRESSOFFSET );
 	ID_EX_RD9 : 			regN generic map (n=>4) port map ( clock, writeregister, ID_EX_RD );
-	ID_EX_RT33 :         regN generic map (n=>4) port map ( clock, read_port2, ID_EX_RT );
-	ID_EX_RS34 :         regN generic map (n=>4) port map ( clock, read_port1, ID_EX_RS );
+	ID_EX_RT33 :         regN generic map (n=>4) port map ( clock, HAZARD_RT, ID_EX_RT );
+	ID_EX_RS34 :         regN generic map (n=>4) port map ( clock, HAZARD_RS, ID_EX_RS );
 	
 	-----------------------------------------------------------------
 	------------------        EX STAGE        -----------------------

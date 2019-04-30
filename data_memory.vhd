@@ -12,7 +12,7 @@ end data_memory;
 architecture struc_behaviour of data_memory is
 
 	constant zero_value : std_logic_vector(3 downto 0) := (others => '0');
-	constant dm0 : std_logic_vector(3 downto 0) := "0100";
+	constant dm0 : std_logic_vector(3 downto 0) := "0000";
 	constant dm1 : std_logic_vector(3 downto 0) := "0110";
 	constant dm2 : std_logic_vector(3 downto 0) := "0111";
 	constant dm3 : std_logic_vector(3 downto 0) := "1000";
